@@ -1,6 +1,6 @@
 # 01 · LLM Red-Team Harness
 
-**▶ [Try it live](https://za1d3v.github.io/Cyber-AI/demos/redteam.html)** · OWASP LLM01, 02, 05, 06, 07, 10
+**▶ [Try it live](https://za1d3v.github.io/cyber-ai/demos/redteam.html)** · OWASP LLM01, 02, 05, 06, 07, 10
 
 ## The client problem
 A company is about to launch a customer-support chatbot connected to its CRM and email. Security asks:

@@ -1,6 +1,6 @@
 # 06 · Risk-Based Vulnerability Prioritizer
 
-**▶ [Try it live](https://za1d3v.github.io/Cyber-AI/demos/vulns.html)** · EPSS · CISA KEV · CVSS
+**▶ [Try it live](https://za1d3v.github.io/cyber-ai/demos/vulns.html)** · EPSS · CISA KEV · CVSS
 
 ## The client problem
 The vulnerability scanner reports 60 open findings, and 43 are "High" or "Critical". The IT team can fix about 10 per sprint.

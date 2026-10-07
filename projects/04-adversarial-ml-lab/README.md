@@ -1,6 +1,6 @@
 # 04 · Adversarial ML Lab: evasion & data poisoning
 
-**▶ [Try it live](https://za1d3v.github.io/Cyber-AI/demos/advml.html)** · OWASP LLM04 · MITRE ATLAS (evasion, poisoning)
+**▶ [Try it live](https://za1d3v.github.io/cyber-ai/demos/advml.html)** · OWASP LLM04 · MITRE ATLAS (evasion, poisoning)
 
 ## The client problem
 A company uses an ML model to filter scam messages (the same applies to fraud, malware or content-moderation models).

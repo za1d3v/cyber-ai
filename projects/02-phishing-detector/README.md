@@ -1,6 +1,6 @@
 # 02 · Explainable Phishing Detector
 
-**▶ [Try it live](https://za1d3v.github.io/Cyber-AI/demos/phishing.html)**
+**▶ [Try it live](https://za1d3v.github.io/cyber-ai/demos/phishing.html)**
 
 ## The client problem
 A 300-person company's security team spends hours each day on emails employees report with the "Report phishing" button.

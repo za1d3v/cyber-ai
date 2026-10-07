@@ -1,6 +1,6 @@
 # 03 · Login Anomaly Detection
 
-**▶ [Try it live](https://za1d3v.github.io/Cyber-AI/demos/logs.html)** · MITRE ATT&CK T1110.001, T1110.003, T1078, T1567
+**▶ [Try it live](https://za1d3v.github.io/cyber-ai/demos/logs.html)** · MITRE ATT&CK T1110.001, T1110.003, T1078, T1567
 
 ## The client problem
 A 42-person company uses cloud sign-in (Microsoft 365 / Okta style) but nobody reviews the logs. They have no

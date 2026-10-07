@@ -2,7 +2,7 @@
 
 > White-hat consulting portfolio by **Zitao Wang**: LLM red teaming, adversarial ML, detection engineering and risk-based prioritization.
 
-**🌐 Live site & demos:** https://za1d3v.github.io/Cyber-AI/
+**🌐 Live site & demos:** https://za1d3v.github.io/cyber-ai/
 **📫 Contact:** zaidev92@gmail.com · [LinkedIn](https://www.linkedin.com/in/zitao-wang-08386130b/) · [AI/ML consulting portfolio](https://za1d3v.github.io/zitao-ai-portfolio/)
 
 Six demos that mirror real engagements. Each has runnable Python, a case-study README and a live in-browser version.
@@ -10,14 +10,14 @@ Everything runs offline on synthetic data. No API keys, no real targets.
 
 | # | Project | Team | Frameworks | Live |
 |---|---------|------|-----------|------|
-| 01 | [**LLM Red-Team Harness**](projects/01-llm-redteam-harness): 10 safe probes, 5 defense layers | 🔴 Red | OWASP LLM01/02/05/06/07/10, ATLAS | [▶](https://za1d3v.github.io/Cyber-AI/demos/redteam.html) |
-| 02 | [**Explainable Phishing Detector**](projects/02-phishing-detector): 93% accuracy, every verdict explained | 🔵 Blue | ATT&CK T1566 | [▶](https://za1d3v.github.io/Cyber-AI/demos/phishing.html) |
-| 03 | [**Login Anomaly Detection**](projects/03-log-anomaly-detection): brute force, spraying, impossible travel, exfil | 🔵 Blue | ATT&CK T1110, T1078, T1567 | [▶](https://za1d3v.github.io/Cyber-AI/demos/logs.html) |
-| 04 | [**Adversarial ML Lab**](projects/04-adversarial-ml-lab): evasion & data poisoning, with defenses | 🔴 Red | OWASP LLM04, ATLAS | [▶](https://za1d3v.github.io/Cyber-AI/demos/advml.html) |
-| 05 | [**ATT&CK Coverage Map**](projects/05-attack-coverage-map): gaps → purple-team test plan | 🟣 Purple | ATT&CK (36 techniques) | [▶](https://za1d3v.github.io/Cyber-AI/demos/attack.html) |
-| 06 | [**Risk-Based Vuln Prioritizer**](projects/06-vuln-prioritizer): 89% of risk removed vs 34% by CVSS | 🟣 Purple | EPSS, KEV, CVSS | [▶](https://za1d3v.github.io/Cyber-AI/demos/vulns.html) |
+| 01 | [**LLM Red-Team Harness**](projects/01-llm-redteam-harness): 10 safe probes, 5 defense layers | 🔴 Red | OWASP LLM01/02/05/06/07/10, ATLAS | [▶](https://za1d3v.github.io/cyber-ai/demos/redteam.html) |
+| 02 | [**Explainable Phishing Detector**](projects/02-phishing-detector): 93% accuracy, every verdict explained | 🔵 Blue | ATT&CK T1566 | [▶](https://za1d3v.github.io/cyber-ai/demos/phishing.html) |
+| 03 | [**Login Anomaly Detection**](projects/03-log-anomaly-detection): brute force, spraying, impossible travel, exfil | 🔵 Blue | ATT&CK T1110, T1078, T1567 | [▶](https://za1d3v.github.io/cyber-ai/demos/logs.html) |
+| 04 | [**Adversarial ML Lab**](projects/04-adversarial-ml-lab): evasion & data poisoning, with defenses | 🔴 Red | OWASP LLM04, ATLAS | [▶](https://za1d3v.github.io/cyber-ai/demos/advml.html) |
+| 05 | [**ATT&CK Coverage Map**](projects/05-attack-coverage-map): gaps → purple-team test plan | 🟣 Purple | ATT&CK (36 techniques) | [▶](https://za1d3v.github.io/cyber-ai/demos/attack.html) |
+| 06 | [**Risk-Based Vuln Prioritizer**](projects/06-vuln-prioritizer): 89% of risk removed vs 34% by CVSS | 🟣 Purple | EPSS, KEV, CVSS | [▶](https://za1d3v.github.io/cyber-ai/demos/vulns.html) |
 
-See the full [framework map](https://za1d3v.github.io/Cyber-AI/demos/frameworks.html) (OWASP LLM Top 10, MITRE ATLAS, MITRE ATT&CK, NIST CSF 2.0).
+See the full [framework map](https://za1d3v.github.io/cyber-ai/demos/frameworks.html) (OWASP LLM Top 10, MITRE ATLAS, MITRE ATT&CK, NIST CSF 2.0).
 
 ## Quick start
 ```bash

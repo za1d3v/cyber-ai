@@ -1,6 +1,6 @@
 # 05 · MITRE ATT&CK Coverage Map → Purple-Team Plan
 
-**▶ [Try it live](https://za1d3v.github.io/Cyber-AI/demos/attack.html)** · MITRE ATT&CK Enterprise
+**▶ [Try it live](https://za1d3v.github.io/cyber-ai/demos/attack.html)** · MITRE ATT&CK Enterprise
 
 ## The client problem
 A mid-size company has an EDR, an email gateway and a SIEM. The board asks: *"Would we catch a real attacker?"*
