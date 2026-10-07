@@ -83,7 +83,7 @@
 
   <section id="work">
     <h2>Selected work</h2>
-    <p class="sub">Six interactive demos that mirror real engagements. They run in your browser, use only synthetic data, and map to industry frameworks.</p>
+    <p class="sub">Seven interactive demos that mirror real engagements. They run in your browser, use only synthetic data, and map to industry frameworks.</p>
     <div class="grid" id="cards"></div>
   </section>
 
@@ -116,6 +116,7 @@ const CARDS = [
   ["04", "red", "Red team", "Adversarial ML Lab", "Watch an attacker rewrite a scam until the spam filter lets it through, then harden the model. Plus data poisoning, and how a golden set stops it.", ["MITRE ATLAS", "Evasion", "Poisoning"], "advml", "04-adversarial-ml-lab"],
   ["05", "purple", "Purple team", "ATT&CK Coverage Map", "Map detections onto 36 MITRE ATT&CK techniques, rank gaps by real-world prevalence, and export a safe purple-team test plan.", ["MITRE ATT&CK", "Detection gaps"], "attack", "05-attack-coverage-map"],
   ["06", "purple", "Vuln management", "Risk-Based Vuln Prioritizer", "60 findings, budget for 10 fixes. Ranking by exploit likelihood and business impact removes 89% of risk vs. 34% sorting by CVSS.", ["EPSS", "KEV", "CVSS"], "vulns", "06-vuln-prioritizer"],
+  ["07", "red", "Red team", "Bilingual Prompt-Injection Probes", "Chinese, code-switched and character-obfuscated injections slip past an English-only guardrail. A normalization + bilingual defense closes the gap. Probes live Qwen/DeepSeek/Kimi endpoints too.", ["OWASP LLM01/07", "Multilingual", "MITRE ATLAS"], "bilingual", "07-bilingual-injection-probes"],
 ];
 const esc = s => s.replace(/&/g, "&amp;");
 document.getElementById("cards").innerHTML = CARDS.map(([n, t, team, title, desc, tags, demo, proj]) => `<div class="card">

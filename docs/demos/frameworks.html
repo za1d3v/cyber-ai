@@ -42,6 +42,10 @@
           <td><span class="pill">36 techniques, 12 tactics</span></td><td><span class="pill">Identify</span><span class="pill">Detect</span></td></tr>
         <tr><td><a href="vulns.html"><b>06 Vuln Prioritizer</b></a></td><td class="muted">—</td><td class="muted">—</td>
           <td><span class="pill">T1190</span><span class="pill">T1133</span></td><td><span class="pill">Identify</span><span class="pill">Protect</span></td></tr>
+        <tr><td><a href="bilingual.html"><b>07 Bilingual Injection Probes</b></a></td>
+          <td><span class="pill">LLM01</span><span class="pill">LLM07</span></td>
+          <td><span class="pill">AML.T0051 LLM Prompt Injection</span><span class="pill">AML.T0056 Extract LLM System Prompt</span></td>
+          <td class="muted">—</td><td><span class="pill">Identify</span><span class="pill">Protect</span></td></tr>
       </tbody>
     </table></div>
   </div>
@@ -50,18 +54,18 @@
     <h2>OWASP Top 10 for LLM Applications: coverage</h2>
     <p class="small muted" style="margin-top:-4px">Filled = tested directly by a demo · half = partially covered.</p>
     <div class="table-scroll"><table class="grid-tbl">
-      <thead><tr><th>Risk</th><th>01 Red-team harness</th><th>04 Adversarial ML</th></tr></thead>
+      <thead><tr><th>Risk</th><th>01 Red-team harness</th><th>04 Adversarial ML</th><th>07 Bilingual probes</th></tr></thead>
       <tbody>
-        <tr><td>LLM01 Prompt Injection</td><td><span class="dot"></span></td><td></td></tr>
-        <tr><td>LLM02 Sensitive Information Disclosure</td><td><span class="dot"></span></td><td></td></tr>
-        <tr><td>LLM03 Supply Chain</td><td></td><td><span class="dot half"></span></td></tr>
-        <tr><td>LLM04 Data and Model Poisoning</td><td></td><td><span class="dot"></span></td></tr>
-        <tr><td>LLM05 Improper Output Handling</td><td><span class="dot"></span></td><td></td></tr>
-        <tr><td>LLM06 Excessive Agency</td><td><span class="dot"></span></td><td></td></tr>
-        <tr><td>LLM07 System Prompt Leakage</td><td><span class="dot"></span></td><td></td></tr>
-        <tr><td>LLM08 Vector and Embedding Weaknesses</td><td><span class="dot half"></span></td><td></td></tr>
-        <tr><td>LLM09 Misinformation</td><td></td><td></td></tr>
-        <tr><td>LLM10 Unbounded Consumption</td><td><span class="dot"></span></td><td></td></tr>
+        <tr><td>LLM01 Prompt Injection</td><td><span class="dot"></span></td><td></td><td><span class="dot"></span></td></tr>
+        <tr><td>LLM02 Sensitive Information Disclosure</td><td><span class="dot"></span></td><td></td><td><span class="dot half"></span></td></tr>
+        <tr><td>LLM03 Supply Chain</td><td></td><td><span class="dot half"></span></td><td></td></tr>
+        <tr><td>LLM04 Data and Model Poisoning</td><td></td><td><span class="dot"></span></td><td></td></tr>
+        <tr><td>LLM05 Improper Output Handling</td><td><span class="dot"></span></td><td></td><td></td></tr>
+        <tr><td>LLM06 Excessive Agency</td><td><span class="dot"></span></td><td></td><td></td></tr>
+        <tr><td>LLM07 System Prompt Leakage</td><td><span class="dot"></span></td><td></td><td><span class="dot"></span></td></tr>
+        <tr><td>LLM08 Vector and Embedding Weaknesses</td><td><span class="dot half"></span></td><td></td><td></td></tr>
+        <tr><td>LLM09 Misinformation</td><td></td><td></td><td></td></tr>
+        <tr><td>LLM10 Unbounded Consumption</td><td><span class="dot"></span></td><td></td><td></td></tr>
       </tbody>
     </table></div>
     <p class="small muted">LLM08 is partly covered by the indirect-injection probe (poisoned retrieved documents). LLM03 is partly covered by the training-data

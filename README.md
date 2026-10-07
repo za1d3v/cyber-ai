@@ -5,8 +5,8 @@
 **🌐 Live site & demos:** https://za1d3v.github.io/cyber-ai/
 **📫 Contact:** zaidev92@gmail.com · [LinkedIn](https://www.linkedin.com/in/zitao-wang-08386130b/) · [AI/ML consulting portfolio](https://za1d3v.github.io/zitao-ai-portfolio/)
 
-Six demos that mirror real engagements. Each has runnable Python, a case-study README and a live in-browser version.
-Everything runs offline on synthetic data. No API keys, no real targets.
+Seven demos that mirror real engagements. Each has runnable Python, a case-study README and a live in-browser version.
+Everything runs offline on synthetic data. No API keys, no real targets (demo 07 can optionally probe a live endpoint you own).
 
 | # | Project | Team | Frameworks | Live |
 |---|---------|------|-----------|------|
@@ -16,6 +16,7 @@ Everything runs offline on synthetic data. No API keys, no real targets.
 | 04 | [**Adversarial ML Lab**](projects/04-adversarial-ml-lab): evasion & data poisoning, with defenses | 🔴 Red | OWASP LLM04, ATLAS | [▶](https://za1d3v.github.io/cyber-ai/demos/advml.html) |
 | 05 | [**ATT&CK Coverage Map**](projects/05-attack-coverage-map): gaps → purple-team test plan | 🟣 Purple | ATT&CK (36 techniques) | [▶](https://za1d3v.github.io/cyber-ai/demos/attack.html) |
 | 06 | [**Risk-Based Vuln Prioritizer**](projects/06-vuln-prioritizer): 89% of risk removed vs 34% by CVSS | 🟣 Purple | EPSS, KEV, CVSS | [▶](https://za1d3v.github.io/cyber-ai/demos/vulns.html) |
+| 07 | [**Bilingual Prompt-Injection Probes**](projects/07-bilingual-injection-probes): Chinese & character-trick injections vs. English-only filters | 🔴 Red | OWASP LLM01/07, ATLAS | [▶](https://za1d3v.github.io/cyber-ai/demos/bilingual.html) |
 
 See the full [framework map](https://za1d3v.github.io/cyber-ai/demos/frameworks.html) (OWASP LLM Top 10, MITRE ATLAS, MITRE ATT&CK, NIST CSF 2.0).
 
@@ -31,6 +32,7 @@ python projects/03-log-anomaly-detection/detect.py
 python projects/04-adversarial-ml-lab/lab.py
 python projects/05-attack-coverage-map/attack_coverage.py
 python projects/06-vuln-prioritizer/prioritize.py
+python projects/07-bilingual-injection-probes/bilingual.py
 pytest
 ```
 

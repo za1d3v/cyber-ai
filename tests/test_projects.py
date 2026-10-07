@@ -3,10 +3,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1] / "projects"
 for name in ["01-llm-redteam-harness", "02-phishing-detector", "03-log-anomaly-detection",
-             "04-adversarial-ml-lab", "05-attack-coverage-map", "06-vuln-prioritizer"]:
+             "04-adversarial-ml-lab", "05-attack-coverage-map", "06-vuln-prioritizer",
+             "07-bilingual-injection-probes"]:
     sys.path.insert(0, str(ROOT / name))
 
 import attack_coverage as coverage  # noqa: E402
+import bilingual  # noqa: E402
 import detect  # noqa: E402
 import lab  # noqa: E402
 import phishing  # noqa: E402
@@ -67,3 +69,19 @@ def test_vuln_prioritizer_beats_cvss():
     risk = prioritize.outcome(fs, prioritize.rank(fs, "risk"), 10)
     assert risk["risk_removed"] > cvss["risk_removed"] + 0.3
     assert risk["kev_fixed"] == risk["kev_total"]
+
+
+def test_bilingual_normalization_and_defense_in_depth():
+    # normalization canonicalizes full-width and strips zero-width characters
+    assert bilingual.normalize("Ｉｇｎｏｒｅ　ａｌｌ") == "Ignore all"
+    assert bilingual.normalize("ig​nore") == "ignore"
+
+    def defended(d):
+        return sum(not r["failed"] for r in bilingual.run(bilingual.SimulatedBot(d)))
+
+    # an English-only filter catches none of the multilingual probes (only the control passes)
+    assert defended(bilingual.Defenses()) == 1
+    # normalization alone handles the character tricks but not the Chinese-language ones
+    assert defended(bilingual.Defenses(normalize_input=True)) == 3
+    # full defense in depth catches everything without breaking the normal request
+    assert defended(bilingual.Defenses(True, True, True, True)) == 10
