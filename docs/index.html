@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zitao Wang — AI Security Consulting</title>
+<meta name="description" content="AI for cybersecurity and security for AI: LLM red teaming, detection engineering, adversarial ML, vulnerability prioritization.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #fbfaf7; --surface: #ffffff; --text: #1c1c1a; --muted: #5d5d58; --line: #e6e3dc; --accent: #0f766e; --accent-soft: #e2f3f1;
+          --red: #b42318; --red-soft: #fde2df; --blue: #1d4ed8; --blue-soft: #e3ebfd; --purple: #6d28d9; --purple-soft: #ede5fb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #121212; --surface: #1b1b1b; --text: #ecebe7; --muted: #a3a29c; --line: #2c2c2a; --accent: #5ed6c4; --accent-soft: #14302d;
+            --red: #ff9b8f; --red-soft: #3f1c18; --blue: #93b4ff; --blue-soft: #1a2442; --purple: #c4a8ff; --purple-soft: #2a2140; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 Inter, system-ui, -apple-system, sans-serif; }
+  a { color: var(--accent); text-decoration: none; } a:hover { text-decoration: underline; }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; gap: 12px; flex-wrap: wrap; }
+  nav .brand { font-weight: 700; color: var(--text); }
+  nav .links a { margin-left: 20px; color: var(--muted); font-weight: 500; }
+  header.hero { padding: 64px 0 52px; }
+  .eyebrow { display: inline-block; background: var(--accent-soft); color: var(--accent); padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 600; }
+  h1 { font-size: clamp(34px, 5.4vw, 56px); line-height: 1.08; margin: 18px 0 16px; letter-spacing: -0.02em; }
+  .lede { font-size: 19px; color: var(--muted); max-width: 680px; }
+  .btn { display: inline-block; padding: 12px 20px; border-radius: 10px; font-weight: 600; margin: 24px 12px 0 0; }
+  .btn.primary { background: var(--accent); color: #fff; } .btn.ghost { border: 1px solid var(--line); color: var(--text); }
+  @media (prefers-color-scheme: dark) { .btn.primary { color: #0b1f1d; } }
+  .btn:hover { text-decoration: none; opacity: .9; }
+  .btn.sm { margin: 0; padding: 8px 14px; font-size: 14px; }
+  section { padding: 56px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 28px; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); margin: 0 0 28px; max-width: 720px; }
+  .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; }
+  .card h3 { margin: 0 0 8px; font-size: 19px; } .card p { margin: 0 0 12px; color: var(--muted); }
+  .card ul { margin: 0; padding-left: 18px; color: var(--muted); }
+  .team { display: inline-block; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; margin-bottom: 10px; align-self: flex-start; }
+  .t-red { background: var(--red-soft); color: var(--red); } .t-blue { background: var(--blue-soft); color: var(--blue); } .t-purple { background: var(--purple-soft); color: var(--purple); }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+  .tag { font-size: 12px; padding: 3px 9px; border-radius: 6px; background: var(--accent-soft); color: var(--accent); font-weight: 500; }
+  .actions { display: flex; gap: 10px; margin-top: auto; padding-top: 18px; flex-wrap: wrap; }
+  .num { font-size: 13px; color: var(--muted); font-weight: 700; letter-spacing: .05em; }
+  .principles { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .principles div h3 { font-size: 16px; margin: 0 0 4px; } .principles div p { margin: 0; color: var(--muted); font-size: 15px; }
+  footer { padding: 40px 0 60px; color: var(--muted); border-top: 1px solid var(--line); font-size: 14px; }
+  @media (max-width: 600px) { nav .links a { margin-left: 12px; font-size: 14px; } header.hero { padding: 36px 0; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="brand" href="#">Zitao Wang · <span style="color:var(--accent)">Cyber-AI</span></a>
+    <div class="links"><a href="#services">Services</a><a href="#work">Work</a><a href="demos/frameworks.html">Frameworks</a><a href="#contact">Contact</a></div>
+  </nav>
+
+  <header class="hero">
+    <span class="eyebrow">AI × Cybersecurity Consulting</span>
+    <h1>AI for security, and<br>security for AI.</h1>
+    <p class="lede">I help teams red-team their AI systems before attackers do, and use machine learning to find real threats faster.
+      Every engagement is white-hat: authorized, scoped, and built on working tools.</p>
+    <a class="btn primary" href="#work">Try the live demos</a>
+    <a class="btn ghost" href="https://github.com/za1d3v/Cyber-AI">See the code</a>
+  </header>
+
+  <section id="services">
+    <h2>Services</h2>
+    <p class="sub">Offensive testing and defensive engineering, focused on where AI changes the picture.</p>
+    <div class="grid">
+      <div class="card"><span class="team t-red">Red team</span><h3>AI &amp; LLM Security Assessments</h3>
+        <p>Find out if your chatbot, copilot or agent can be tricked before launch.</p>
+        <ul><li>Prompt-injection &amp; data-leak testing (OWASP LLM Top 10)</li><li>Adversarial ML: evasion &amp; poisoning</li><li>Repeatable test harnesses in CI</li></ul></div>
+      <div class="card"><span class="team t-blue">Blue team</span><h3>AI-Assisted Detection Engineering</h3>
+        <p>Catch phishing, account takeover and exfiltration with explainable models.</p>
+        <ul><li>Phishing triage &amp; email security</li><li>Identity / login anomaly detection</li><li>Alert tuning to cut false positives</li></ul></div>
+      <div class="card"><span class="team t-purple">Purple team</span><h3>Security Strategy &amp; Prioritization</h3>
+        <p>Turn "are we secure?" into a ranked, testable plan.</p>
+        <ul><li>MITRE ATT&amp;CK coverage mapping</li><li>Risk-based vulnerability prioritization</li><li>Purple-team exercise planning</li></ul></div>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2>Selected work</h2>
+    <p class="sub">Six interactive demos that mirror real engagements. They run in your browser, use only synthetic data, and map to industry frameworks.</p>
+    <div class="grid" id="cards"></div>
+  </section>
+
+  <section>
+    <h2>How I work</h2>
+    <div class="principles">
+      <div><h3>Authorized &amp; scoped</h3><p>Written authorization and rules of engagement before any testing. No exceptions.</p></div>
+      <div><h3>Safe by design</h3><p>Canary-based probes and pre-approved emulations prove a weakness without causing harm.</p></div>
+      <div><h3>Explainable</h3><p>Every alert and finding says <i>why</i>, so your team can act on it and learn from it.</p></div>
+      <div><h3>Framework-mapped</h3><p>Results map to <a href="demos/frameworks.html">OWASP, MITRE ATT&amp;CK, MITRE ATLAS and NIST CSF</a> for audit-ready reporting.</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Let's talk</h2>
+    <p class="sub">Launching an AI feature, or worried about what your logs aren't telling you? I reply within one business day.</p>
+    <a class="btn primary" href="mailto:zaidev92@gmail.com">zaidev92@gmail.com</a>
+    <a class="btn ghost" href="https://www.linkedin.com/in/zitao-wang-08386130b">LinkedIn</a>
+    <a class="btn ghost" href="https://za1d3v.github.io/zitao-ai-portfolio/">AI/ML consulting portfolio →</a>
+  </section>
+
+  <footer>© 2026 Zitao Wang · All demos use synthetic data and simulated targets. Only test systems you own or are authorized to test.</footer>
+</div>
+<script>
+const G = "https://github.com/za1d3v/Cyber-AI/tree/main/projects/";
+const CARDS = [
+  ["01", "red", "Red team", "LLM Red-Team Harness", "Fire 10 safe, canary-based attack probes at a chatbot: prompt injection, system-prompt leaks, data exfiltration, rogue tool calls. Toggle defenses to see what each one stops.", ["OWASP LLM Top 10", "Prompt injection"], "redteam", "01-llm-redteam-harness"],
+  ["02", "blue", "Blue team", "Explainable Phishing Detector", "Scores every email and explains why: lookalike domains, mismatched links, urgency. 93% accuracy with zero false alarms; the misses teach a process lesson.", ["Email security", "Explainable ML"], "phishing", "02-phishing-detector"],
+  ["03", "blue", "Blue team / SOC", "Login Anomaly Detection", "A week of sign-in logs with five hidden attacks: brute force, password spraying, impossible travel, exfiltration. Tune sensitivity vs. alert fatigue.", ["Identity", "MITRE ATT&CK"], "logs", "03-log-anomaly-detection"],
+  ["04", "red", "Red team", "Adversarial ML Lab", "Watch an attacker rewrite a scam until the spam filter lets it through, then harden the model. Plus data poisoning, and how a golden set stops it.", ["MITRE ATLAS", "Evasion", "Poisoning"], "advml", "04-adversarial-ml-lab"],
+  ["05", "purple", "Purple team", "ATT&CK Coverage Map", "Map detections onto 36 MITRE ATT&CK techniques, rank gaps by real-world prevalence, and export a safe purple-team test plan.", ["MITRE ATT&CK", "Detection gaps"], "attack", "05-attack-coverage-map"],
+  ["06", "purple", "Vuln management", "Risk-Based Vuln Prioritizer", "60 findings, budget for 10 fixes. Ranking by exploit likelihood and business impact removes 89% of risk vs. 34% sorting by CVSS.", ["EPSS", "KEV", "CVSS"], "vulns", "06-vuln-prioritizer"],
+];
+const esc = s => s.replace(/&/g, "&amp;");
+document.getElementById("cards").innerHTML = CARDS.map(([n, t, team, title, desc, tags, demo, proj]) => `<div class="card">
+  <span class="team t-${t}">${team}</span><div class="num">${n}</div><h3>${esc(title)}</h3><p>${desc}</p>
+  <div class="tags">${tags.map(x => `<span class="tag">${esc(x)}</span>`).join("")}</div>
+  <div class="actions"><a class="btn primary sm" href="demos/${demo}.html">Try it live →</a><a class="btn ghost sm" href="${G}${proj}">Code</a></div></div>`).join("");
+</script>
+</body>
+</html>

@@ -1,0 +1,4178 @@
+[
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "no-reply@parcelgo-support.info",
+  "reply_to": "",
+  "subject": "New voicemail received",
+  "body": "Hi Priya, a file has been shared with you. Sign in to view it.",
+  "links": [
+   {
+    "text": "Open document",
+    "href": "https://parcelgo-drive.xyz/view"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Diego",
+  "from_addr": "diego@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Team lunch Friday",
+  "body": "Hi Diego, can you review the draft by Thursday?",
+  "links": [],
+  "attachments": [
+   "roadmap.docx"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Security",
+  "from_addr": "no-reply@payflow-secure.live",
+  "reply_to": "",
+  "subject": "Action required: your account is suspended",
+  "body": "Dear customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.payflow.com/secure",
+    "href": "https://185.23.44.10/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Parcelgo",
+  "from_addr": "offers@parcelgo.com",
+  "reply_to": "",
+  "subject": "Last chance: 20% off expires today",
+  "body": "Dear customer, last chance! Our sale expires today.",
+  "links": [
+   {
+    "text": "Shop now",
+    "href": "https://bit.ly/3xYz"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Security",
+  "from_addr": "no-reply@payflow-support.live",
+  "reply_to": "help@outlook-help.xyz",
+  "subject": "Final notice: verify your account",
+  "body": "Dear valued customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.payflow.com/secure",
+    "href": "https://payflow-support.live/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Receipt for your payment",
+  "body": "Hi Fatima, thanks for your payment. No action is needed.",
+  "links": [
+   {
+    "text": "www.northbank.com/account",
+    "href": "https://www.northbank.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Zephyr CEO",
+  "from_addr": "exec.assistant@zephyr-tech.co",
+  "reply_to": "",
+  "subject": "Quick favor - urgent",
+  "body": "Hi Hannah, are you at your desk? I need you to buy gift cards for a client today, it's urgent. Send me the codes asap. Don't call, I'm in a meeting.",
+  "links": [],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "notifications@acmecloud.com",
+  "reply_to": "",
+  "subject": "Password reset requested",
+  "body": "Hi Wei, you asked to reset your password. If this was you, use the link below. It expires today. If it wasn't you, ignore this email.",
+  "links": [
+   {
+    "text": "Reset password",
+    "href": "https://accounts.acmecloud.com/reset"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Zephyr CEO",
+  "from_addr": "exec.assistant@zephyr-tech.co",
+  "reply_to": "",
+  "subject": "Quick favor - urgent",
+  "body": "Hi Marcus, are you at your desk? I need you to buy gift cards for a client today, it's urgent. Send me the codes asap. Don't call, I'm in a meeting.",
+  "links": [],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Elena",
+  "from_addr": "elena@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Draft roadmap for review",
+  "body": "Hi Diego, can you review the draft by Thursday?",
+  "links": [
+   {
+    "text": "Roadmap doc",
+    "href": "https://docs.zephyrtech.com/roadmap"
+   }
+  ],
+  "attachments": [
+   "notes.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Zephyr CEO",
+  "from_addr": "exec.assistant@gmail.com",
+  "reply_to": "",
+  "subject": "Quick favor - urgent",
+  "body": "Hi Hannah, are you at your desk? I need you to buy gift cards for a client today, it's urgent. Send me the codes asap. Don't call, I'm in a meeting.",
+  "links": [],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Wei",
+  "from_addr": "wei@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Reminder: timesheets due",
+  "body": "Hi Marcus, sharing the notes from today.",
+  "links": [],
+  "attachments": [
+   "roadmap.docx"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "no-reply@parcelg.info",
+  "reply_to": "help@mailbox.ru",
+  "subject": "Outstanding invoice #4471",
+  "body": "Hello user, Your payment overdue notice is attached. Open the invoice attached immediately to avoid service interruption and update your payment details.",
+  "links": [],
+  "attachments": [
+   "invoice.iso"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Priya",
+  "from_addr": "priya@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Notes from today's standup",
+  "body": "Hi Hannah, lunch is at noon in the big room.",
+  "links": [],
+  "attachments": [
+   "roadmap.docx"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Accounts",
+  "from_addr": "accounts@payflow.com",
+  "reply_to": "",
+  "subject": "Updated remittance information",
+  "body": "Hi Diego, our banking information has changed. Please send this month's payment to the new account in the attached letter.",
+  "links": [],
+  "attachments": [
+   "new_bank_details.pdf"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Parcelgo",
+  "from_addr": "notifications@parcelgo.com",
+  "reply_to": "",
+  "subject": "Receipt for your payment",
+  "body": "Hi Diego, your order is on its way.",
+  "links": [
+   {
+    "text": "www.parcelgo.com/account",
+    "href": "https://www.parcelgo.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "no-reply@parcelgo-verify.top",
+  "reply_to": "",
+  "subject": "Action required: your account is suspended",
+  "body": "Dear valued customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.parcelgo.com/secure",
+    "href": "https://bit.ly/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Elena",
+  "from_addr": "elena@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Draft roadmap for review",
+  "body": "Hi Hannah, lunch is at noon in the big room.",
+  "links": [],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Zephyr CEO",
+  "from_addr": "exec.assistant@gmail.com",
+  "reply_to": "",
+  "subject": "Quick favor - urgent",
+  "body": "Hi Diego, are you at your desk? I need you to buy gift cards for a client today, it's urgent. Send me the codes asap. Don't call, I'm in a meeting.",
+  "links": [],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Payflow",
+  "from_addr": "notifications@payflow.com",
+  "reply_to": "",
+  "subject": "Invoice for October",
+  "body": "Hi Diego, friendly reminder that invoice 1182 is now payment overdue. Invoice attached for your records.",
+  "links": [],
+  "attachments": [
+   "invoice.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Security",
+  "from_addr": "no-reply@payflow-secure.top",
+  "reply_to": "help@support-desk.info",
+  "subject": "Action required: your account is suspended",
+  "body": "Hi Sam, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.payflow.com/secure",
+    "href": "https://bit.ly/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Priya",
+  "from_addr": "priya@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Notes from today's standup",
+  "body": "Hi Marcus, sharing the notes from today.",
+  "links": [
+   {
+    "text": "Roadmap doc",
+    "href": "https://docs.zephyrtech.com/roadmap"
+   }
+  ],
+  "attachments": [
+   "roadmap.docx"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Zephyr CEO",
+  "from_addr": "exec.assistant@gmail.com",
+  "reply_to": "",
+  "subject": "Quick favor - urgent",
+  "body": "Hi Fatima, are you at your desk? I need you to buy gift cards for a client today, it's urgent. Send me the codes asap. Don't call, I'm in a meeting.",
+  "links": [],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Zephyr IT Security",
+  "from_addr": "security@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Action required: security training due",
+  "body": "Hi Marcus, action required: complete your annual security training within 24 hours or your account will be locked until it's done.",
+  "links": [
+   {
+    "text": "Start training",
+    "href": "https://training.zephyrtech.com/start"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "tracking@parcelg0.info",
+  "reply_to": "help@mailbox.ru",
+  "subject": "Your parcel could not be delivered",
+  "body": "Hello user, We attempted delivery. A small fee is required. Confirm your details within 24 hours or the package will be returned.",
+  "links": [
+   {
+    "text": "Track parcel",
+    "href": "https://northbank-verify.info/track"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Payflow",
+  "from_addr": "notifications@payflow.com",
+  "reply_to": "",
+  "subject": "Password reset requested",
+  "body": "Hi Wei, you asked to reset your password. If this was you, use the link below. It expires today. If it wasn't you, ignore this email.",
+  "links": [
+   {
+    "text": "Reset password",
+    "href": "https://accounts.payflow.com/reset"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Security",
+  "from_addr": "no-reply@acmeclou.com",
+  "reply_to": "help@support-desk.info",
+  "subject": "Final notice: verify your account",
+  "body": "Dear valued customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.acmecloud.com/secure",
+    "href": "https://acmeclou.com/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Fatima",
+  "from_addr": "fatima@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Notes from today's standup",
+  "body": "Hi Wei, lunch is at noon in the big room.",
+  "links": [],
+  "attachments": [
+   "roadmap.docx"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Accounts",
+  "from_addr": "accounts@acmecloud.com",
+  "reply_to": "",
+  "subject": "Updated remittance information",
+  "body": "Hi Sam, our banking information has changed. Please send this month's payment to the new account in the attached letter.",
+  "links": [],
+  "attachments": [
+   "new_bank_details.pdf"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Password reset requested",
+  "body": "Hi Priya, you asked to reset your password. If this was you, use the link below. It expires today. If it wasn't you, ignore this email.",
+  "links": [
+   {
+    "text": "Reset password",
+    "href": "https://accounts.northbank.com/reset"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "no-reply@parcelgo-verify.xyz",
+  "reply_to": "",
+  "subject": "Unusual sign-in detected",
+  "body": "Hi Fatima, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.parcelgo.com/secure",
+    "href": "https://login-parcelgo.click/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Hannah",
+  "from_addr": "hannah@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Notes from today's standup",
+  "body": "Hi Sam, lunch is at noon in the big room.",
+  "links": [],
+  "attachments": [
+   "notes.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Accounts",
+  "from_addr": "accounts@acmecloud.com",
+  "reply_to": "",
+  "subject": "Updated remittance information",
+  "body": "Hi Hannah, please note our bank details have changed. Use the new account for this month's payment.",
+  "links": [],
+  "attachments": [
+   "new_bank_details.pdf"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Reminder: payment overdue",
+  "body": "Hi Fatima, friendly reminder that invoice 1182 is now payment overdue. Invoice attached for your records.",
+  "links": [],
+  "attachments": [
+   "invoice.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Security",
+  "from_addr": "no-reply@payflow-secure.top",
+  "reply_to": "help@support-desk.info",
+  "subject": "Final notice: verify your account",
+  "body": "Dear customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.payflow.com/secure",
+    "href": "https://bit.ly/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Parcelgo",
+  "from_addr": "notifications@parcelgo.com",
+  "reply_to": "",
+  "subject": "Your monthly statement is ready",
+  "body": "Hi Hannah, thanks for your payment. No action is needed.",
+  "links": [
+   {
+    "text": "www.parcelgo.com/account",
+    "href": "https://www.parcelgo.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Accounts",
+  "from_addr": "accounts@acmecloud.com",
+  "reply_to": "",
+  "subject": "Updated remittance information",
+  "body": "Hi Sam, please note our bank details have changed. Use the new account for this month's payment.",
+  "links": [],
+  "attachments": [
+   "new_bank_details.pdf"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Parcelgo",
+  "from_addr": "notifications@parcelgo.com",
+  "reply_to": "",
+  "subject": "What's new this month",
+  "body": "Hi Sam, here are this month's product updates and tips.",
+  "links": [
+   {
+    "text": "Read more",
+    "href": "https://news.parcelgo.com/october"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "tracking@parcelgo-delivery.live",
+  "reply_to": "help@outlook-help.xyz",
+  "subject": "Your parcel could not be delivered",
+  "body": "Dear customer, We attempted delivery. A small fee is required. Confirm your details within 24 hours or the package will be returned.",
+  "links": [
+   {
+    "text": "Track parcel",
+    "href": "https://login-parcelgo.click/track"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "offers@acmecloud.com",
+  "reply_to": "",
+  "subject": "Last chance: 20% off expires today",
+  "body": "Dear customer, last chance! Our sale expires today.",
+  "links": [
+   {
+    "text": "Shop now",
+    "href": "https://bit.ly/3xYz"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Security",
+  "from_addr": "no-reply@acmeclou.live",
+  "reply_to": "",
+  "subject": "Action required: your account is suspended",
+  "body": "Dear valued customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.acmecloud.com/secure",
+    "href": "https://acmeclou.live/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Zephyr IT Security",
+  "from_addr": "security@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Action required: security training due",
+  "body": "Hi Marcus, action required: complete your annual security training within 24 hours or your account will be locked until it's done.",
+  "links": [
+   {
+    "text": "Start training",
+    "href": "https://training.zephyrtech.com/start"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Zephyr CEO",
+  "from_addr": "ceo.office@zephyrtech-mail.com",
+  "reply_to": "",
+  "subject": "Quick favor - urgent",
+  "body": "Hi Wei, are you at your desk? I need you to buy gift cards for a client today, it's urgent. Send me the codes asap. Don't call, I'm in a meeting.",
+  "links": [],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Hannah",
+  "from_addr": "hannah@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Team lunch Friday",
+  "body": "Hi Marcus, sharing the notes from today.",
+  "links": [
+   {
+    "text": "Roadmap doc",
+    "href": "https://docs.zephyrtech.com/roadmap"
+   }
+  ],
+  "attachments": [
+   "notes.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Zephyr CEO",
+  "from_addr": "ceo.office@zephyr-tech.co",
+  "reply_to": "",
+  "subject": "Quick favor - urgent",
+  "body": "Hi Elena, are you at your desk? I need you to buy gift cards for a client today, it's urgent. Send me the codes asap. Don't call, I'm in a meeting.",
+  "links": [],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Payflow",
+  "from_addr": "notifications@payflow.com",
+  "reply_to": "",
+  "subject": "Reminder: payment overdue",
+  "body": "Hi Marcus, friendly reminder that invoice 1182 is now payment overdue. Invoice attached for your records.",
+  "links": [],
+  "attachments": [
+   "invoice.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Security",
+  "from_addr": "no-reply@northbank-support.info",
+  "reply_to": "help@outlook-help.xyz",
+  "subject": "Action required: your account is suspended",
+  "body": "Hello user, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.northbank.com/secure",
+    "href": "https://northbank-support.info/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Parcelgo",
+  "from_addr": "notifications@parcelgo.com",
+  "reply_to": "",
+  "subject": "Password reset requested",
+  "body": "Hi Elena, you asked to reset your password. If this was you, use the link below. It expires today. If it wasn't you, ignore this email.",
+  "links": [
+   {
+    "text": "Reset password",
+    "href": "https://accounts.parcelgo.com/reset"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Security",
+  "from_addr": "no-reply@acmecloud-verify.top",
+  "reply_to": "",
+  "subject": "Shared document: Q3 budget",
+  "body": "Hi Sam, a file has been shared with you. Sign in to view it.",
+  "links": [
+   {
+    "text": "Open document",
+    "href": "https://docs-acmecloud.live/view"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Parcelgo",
+  "from_addr": "offers@parcelgo.com",
+  "reply_to": "",
+  "subject": "Last chance: 20% off expires today",
+  "body": "Dear customer, last chance! Our sale expires today.",
+  "links": [
+   {
+    "text": "Shop now",
+    "href": "https://bit.ly/3xYz"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Security",
+  "from_addr": "no-reply@payflow-support.xyz",
+  "reply_to": "help@support-desk.info",
+  "subject": "Outstanding invoice #4471",
+  "body": "Hello user, Your payment overdue notice is attached. Open the invoice attached immediately to avoid service interruption and update your payment details.",
+  "links": [],
+  "attachments": [
+   "INV-2026.xlsm"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Fatima",
+  "from_addr": "fatima@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Draft roadmap for review",
+  "body": "Hi Diego, sharing the notes from today.",
+  "links": [],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Security",
+  "from_addr": "no-reply@northbank-secure.xyz",
+  "reply_to": "",
+  "subject": "Payment overdue - invoice attached",
+  "body": "Dear valued customer, Your payment overdue notice is attached. Open the invoice attached immediately to avoid service interruption and update your payment details.",
+  "links": [],
+  "attachments": [
+   "INV-2026.xlsm"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Payflow",
+  "from_addr": "notifications@payflow.com",
+  "reply_to": "",
+  "subject": "Reminder: payment overdue",
+  "body": "Hi Elena, your October invoice is attached. It will be charged automatically on the 15th.",
+  "links": [],
+  "attachments": [
+   "invoice.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "tracking@parce1go.top",
+  "reply_to": "",
+  "subject": "Your parcel could not be delivered",
+  "body": "Hello user, We attempted delivery. A small fee is required. Confirm your details within 24 hours or the package will be returned.",
+  "links": [
+   {
+    "text": "Track parcel",
+    "href": "https://parcelgo-secure.top/track"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Marcus",
+  "from_addr": "marcus@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Draft roadmap for review",
+  "body": "Hi Sam, sharing the notes from today.",
+  "links": [
+   {
+    "text": "Roadmap doc",
+    "href": "https://docs.zephyrtech.com/roadmap"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "no-reply@parcelg.info",
+  "reply_to": "",
+  "subject": "Payment overdue - invoice attached",
+  "body": "Dear customer, Your payment overdue notice is attached. Open the invoice attached immediately to avoid service interruption and update your payment details.",
+  "links": [],
+  "attachments": [
+   "statement.zip"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Parcelgo",
+  "from_addr": "notifications@parcelgo.com",
+  "reply_to": "",
+  "subject": "Receipt for your payment",
+  "body": "Hi Sam, your order is on its way.",
+  "links": [
+   {
+    "text": "www.parcelgo.com/account",
+    "href": "https://www.parcelgo.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Zephyr CEO",
+  "from_addr": "ceo.office@zephyr-tech.co",
+  "reply_to": "",
+  "subject": "Quick favor - urgent",
+  "body": "Hi Priya, are you at your desk? I need you to buy gift cards for a client today, it's urgent. Send me the codes asap. Don't call, I'm in a meeting.",
+  "links": [],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Sam",
+  "from_addr": "sam@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Reminder: timesheets due",
+  "body": "Hi Priya, can you review the draft by Thursday?",
+  "links": [
+   {
+    "text": "Roadmap doc",
+    "href": "https://docs.zephyrtech.com/roadmap"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Accounts",
+  "from_addr": "accounts@acmecloud.com",
+  "reply_to": "",
+  "subject": "Updated remittance information",
+  "body": "Hi Fatima, please note our bank details have changed. Use the new account for this month's payment.",
+  "links": [],
+  "attachments": [
+   "new_bank_details.pdf"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Parcelgo",
+  "from_addr": "notifications@parcelgo.com",
+  "reply_to": "",
+  "subject": "Your monthly statement is ready",
+  "body": "Hi Diego, your statement is available in the app.",
+  "links": [
+   {
+    "text": "www.parcelgo.com/account",
+    "href": "https://www.parcelgo.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "tracking@parce1go.xyz",
+  "reply_to": "help@support-desk.info",
+  "subject": "Your parcel could not be delivered",
+  "body": "Dear customer, We attempted delivery. A small fee is required. Confirm your details within 24 hours or the package will be returned.",
+  "links": [
+   {
+    "text": "Track parcel",
+    "href": "https://northbank-secure.xyz/track"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Parcelgo",
+  "from_addr": "notifications@parcelgo.com",
+  "reply_to": "",
+  "subject": "What's new this month",
+  "body": "Hi Sam, here are this month's product updates and tips.",
+  "links": [
+   {
+    "text": "Read more",
+    "href": "https://news.parcelgo.com/october"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Security",
+  "from_addr": "no-reply@payflow-support.top",
+  "reply_to": "",
+  "subject": "Outstanding invoice #4471",
+  "body": "Dear customer, Your payment overdue notice is attached. Open the invoice attached immediately to avoid service interruption and update your payment details.",
+  "links": [],
+  "attachments": [
+   "invoice.iso"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Parcelgo",
+  "from_addr": "notifications@parcelgo.com",
+  "reply_to": "",
+  "subject": "Your monthly statement is ready",
+  "body": "Hi Priya, your order is on its way.",
+  "links": [
+   {
+    "text": "www.parcelgo.com/account",
+    "href": "https://www.parcelgo.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "tracking@parce1go.xyz",
+  "reply_to": "",
+  "subject": "Your parcel could not be delivered",
+  "body": "Hi Marcus, We attempted delivery. A small fee is required. Confirm your details within 24 hours or the package will be returned.",
+  "links": [
+   {
+    "text": "Track parcel",
+    "href": "https://login-acmecloud.click/track"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Your order has shipped",
+  "body": "Hi Priya, your statement is available in the app.",
+  "links": [
+   {
+    "text": "www.northbank.com/account",
+    "href": "https://www.northbank.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Security",
+  "from_addr": "no-reply@acmecloud-verify.live",
+  "reply_to": "",
+  "subject": "Unusual sign-in detected",
+  "body": "Dear customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.acmecloud.com/secure",
+    "href": "https://login-acmecloud.click/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Diego",
+  "from_addr": "diego@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Draft roadmap for review",
+  "body": "Hi Elena, please submit timesheets by Friday.",
+  "links": [],
+  "attachments": [
+   "notes.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Security",
+  "from_addr": "no-reply@acmecloud-secure.live",
+  "reply_to": "",
+  "subject": "Shared document: Q3 budget",
+  "body": "Hi Marcus, a file has been shared with you. Sign in to view it.",
+  "links": [
+   {
+    "text": "Open document",
+    "href": "https://docs-acmecloud.live/view"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Payflow",
+  "from_addr": "notifications@payflow.com",
+  "reply_to": "",
+  "subject": "Password reset requested",
+  "body": "Hi Marcus, you asked to reset your password. If this was you, use the link below. It expires today. If it wasn't you, ignore this email.",
+  "links": [
+   {
+    "text": "Reset password",
+    "href": "https://accounts.payflow.com/reset"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Security",
+  "from_addr": "no-reply@payflo.com",
+  "reply_to": "help@mailbox.ru",
+  "subject": "New voicemail received",
+  "body": "Hi Priya, a file has been shared with you. Sign in to view it.",
+  "links": [
+   {
+    "text": "Open document",
+    "href": "https://share-files.top/view"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "offers@northbank.com",
+  "reply_to": "",
+  "subject": "Last chance: 20% off expires today",
+  "body": "Dear customer, last chance! Our sale expires today.",
+  "links": [
+   {
+    "text": "Shop now",
+    "href": "https://bit.ly/3xYz"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Accounts",
+  "from_addr": "accounts@acmecloud.com",
+  "reply_to": "",
+  "subject": "Updated remittance information",
+  "body": "Hi Hannah, our banking information has changed. Please send this month's payment to the new account in the attached letter.",
+  "links": [],
+  "attachments": [
+   "new_bank_details.pdf"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Payflow",
+  "from_addr": "notifications@payflow.com",
+  "reply_to": "",
+  "subject": "Reminder: payment overdue",
+  "body": "Hi Marcus, your October invoice is attached. It will be charged automatically on the 15th.",
+  "links": [],
+  "attachments": [
+   "invoice.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Security",
+  "from_addr": "no-reply@acmecloud-secure.live",
+  "reply_to": "",
+  "subject": "Final notice: verify your account",
+  "body": "Hello user, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.acmecloud.com/secure",
+    "href": "https://login-acmecloud.click/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Priya",
+  "from_addr": "priya@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Reminder: timesheets due",
+  "body": "Hi Hannah, lunch is at noon in the big room.",
+  "links": [],
+  "attachments": [
+   "roadmap.docx"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Security",
+  "from_addr": "no-reply@acmecloud-verify.xyz",
+  "reply_to": "",
+  "subject": "New voicemail received",
+  "body": "Hi Marcus, a file has been shared with you. Sign in to view it.",
+  "links": [
+   {
+    "text": "Open document",
+    "href": "https://acmecloud-drive.xyz/view"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Priya",
+  "from_addr": "priya@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Draft roadmap for review",
+  "body": "Hi Hannah, please submit timesheets by Friday.",
+  "links": [],
+  "attachments": [
+   "roadmap.docx"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Security",
+  "from_addr": "no-reply@payfl0w.info",
+  "reply_to": "help@outlook-help.xyz",
+  "subject": "Action required: your account is suspended",
+  "body": "Dear customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.payflow.com/secure",
+    "href": "https://payfl0w.info/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "notifications@acmecloud.com",
+  "reply_to": "",
+  "subject": "Last chance: early-bird webinar seats",
+  "body": "Hi Fatima, here are this month's product updates and tips.",
+  "links": [
+   {
+    "text": "Read more",
+    "href": "https://news.acmecloud.com/october"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "tracking@parcelg0.top",
+  "reply_to": "",
+  "subject": "Your parcel could not be delivered",
+  "body": "Hi Hannah, We attempted delivery. A small fee is required. Confirm your details within 24 hours or the package will be returned.",
+  "links": [
+   {
+    "text": "Track parcel",
+    "href": "https://n0rthbank.top/track"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Zephyr IT Security",
+  "from_addr": "security@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Action required: security training due",
+  "body": "Hi Diego, action required: complete your annual security training within 24 hours or your account will be locked until it's done.",
+  "links": [
+   {
+    "text": "Start training",
+    "href": "https://training.zephyrtech.com/start"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "no-reply@parcelgo-support.info",
+  "reply_to": "",
+  "subject": "Outstanding invoice #4471",
+  "body": "Hello user, Your payment overdue notice is attached. Open the invoice attached immediately to avoid service interruption and update your payment details.",
+  "links": [],
+  "attachments": [
+   "Invoice_4471.html"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "notifications@acmecloud.com",
+  "reply_to": "",
+  "subject": "Invoice for October",
+  "body": "Hi Marcus, friendly reminder that invoice 1182 is now payment overdue. Invoice attached for your records.",
+  "links": [],
+  "attachments": [
+   "invoice.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "tracking@parcelgo-delivery.com",
+  "reply_to": "",
+  "subject": "Your parcel could not be delivered",
+  "body": "Dear customer, We attempted delivery. A small fee is required. Confirm your details within 24 hours or the package will be returned.",
+  "links": [
+   {
+    "text": "Track parcel",
+    "href": "https://login-parcelgo.click/track"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Last chance: early-bird webinar seats",
+  "body": "Hi Marcus, here are this month's product updates and tips.",
+  "links": [
+   {
+    "text": "Read more",
+    "href": "https://news.northbank.com/october"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "tracking@parcelgo-delivery.xyz",
+  "reply_to": "help@mailbox.ru",
+  "subject": "Your parcel could not be delivered",
+  "body": "Dear valued customer, We attempted delivery. A small fee is required. Confirm your details within 24 hours or the package will be returned.",
+  "links": [
+   {
+    "text": "Track parcel",
+    "href": "https://login-acmecloud.click/track"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Invoice for October",
+  "body": "Hi Sam, friendly reminder that invoice 1182 is now payment overdue. Invoice attached for your records.",
+  "links": [],
+  "attachments": [
+   "invoice.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Security",
+  "from_addr": "no-reply@payflo.top",
+  "reply_to": "",
+  "subject": "Shared document: Q3 budget",
+  "body": "Hi Elena, a file has been shared with you. Sign in to view it.",
+  "links": [
+   {
+    "text": "Open document",
+    "href": "https://share-files.top/view"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Parcelgo",
+  "from_addr": "notifications@parcelgo.com",
+  "reply_to": "",
+  "subject": "Last chance: early-bird webinar seats",
+  "body": "Hi Wei, here are this month's product updates and tips.",
+  "links": [
+   {
+    "text": "Read more",
+    "href": "https://news.parcelgo.com/october"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "tracking@parce1go.xyz",
+  "reply_to": "",
+  "subject": "Your parcel could not be delivered",
+  "body": "Dear customer, We attempted delivery. A small fee is required. Confirm your details within 24 hours or the package will be returned.",
+  "links": [
+   {
+    "text": "Track parcel",
+    "href": "https://bit.ly/track"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "notifications@acmecloud.com",
+  "reply_to": "",
+  "subject": "Your order has shipped",
+  "body": "Hi Hannah, your order is on its way.",
+  "links": [
+   {
+    "text": "www.acmecloud.com/account",
+    "href": "https://www.acmecloud.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Zephyr CEO",
+  "from_addr": "ceo.office@zephyr-tech.co",
+  "reply_to": "",
+  "subject": "Quick favor - urgent",
+  "body": "Hi Marcus, are you at your desk? I need you to buy gift cards for a client today, it's urgent. Send me the codes asap. Don't call, I'm in a meeting.",
+  "links": [],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Parcelgo",
+  "from_addr": "notifications@parcelgo.com",
+  "reply_to": "",
+  "subject": "Password reset requested",
+  "body": "Hi Sam, you asked to reset your password. If this was you, use the link below. It expires today. If it wasn't you, ignore this email.",
+  "links": [
+   {
+    "text": "Reset password",
+    "href": "https://accounts.parcelgo.com/reset"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "no-reply@parcelg.top",
+  "reply_to": "",
+  "subject": "Final notice: verify your account",
+  "body": "Hi Diego, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.parcelgo.com/secure",
+    "href": "https://185.23.44.10/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Parcelgo",
+  "from_addr": "notifications@parcelgo.com",
+  "reply_to": "",
+  "subject": "Invoice for October",
+  "body": "Hi Wei, friendly reminder that invoice 1182 is now payment overdue. Invoice attached for your records.",
+  "links": [],
+  "attachments": [
+   "invoice.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "no-reply@parcelg.xyz",
+  "reply_to": "",
+  "subject": "Action required: your account is suspended",
+  "body": "Dear customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.parcelgo.com/secure",
+    "href": "https://login-parcelgo.click/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Zephyr IT Security",
+  "from_addr": "security@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Action required: security training due",
+  "body": "Hi Diego, action required: complete your annual security training within 24 hours or your account will be locked until it's done.",
+  "links": [
+   {
+    "text": "Start training",
+    "href": "https://training.zephyrtech.com/start"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "no-reply@parcelgo-secure.top",
+  "reply_to": "",
+  "subject": "Action required: your account is suspended",
+  "body": "Hi Diego, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.parcelgo.com/secure",
+    "href": "https://185.23.44.10/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Payflow",
+  "from_addr": "offers@payflow.com",
+  "reply_to": "",
+  "subject": "Last chance: 20% off expires today",
+  "body": "Dear customer, last chance! Our sale expires today.",
+  "links": [
+   {
+    "text": "Shop now",
+    "href": "https://bit.ly/3xYz"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Security",
+  "from_addr": "no-reply@acmecloud-secure.top",
+  "reply_to": "",
+  "subject": "Action required: your account is suspended",
+  "body": "Dear customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.acmecloud.com/secure",
+    "href": "https://185.23.44.10/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Sam",
+  "from_addr": "sam@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Team lunch Friday",
+  "body": "Hi Elena, lunch is at noon in the big room.",
+  "links": [],
+  "attachments": [
+   "roadmap.docx"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "no-reply@parcelg.info",
+  "reply_to": "",
+  "subject": "New voicemail received",
+  "body": "Hi Sam, a file has been shared with you. Sign in to view it.",
+  "links": [
+   {
+    "text": "Open document",
+    "href": "https://share-files.top/view"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Wei",
+  "from_addr": "wei@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Reminder: timesheets due",
+  "body": "Hi Priya, lunch is at noon in the big room.",
+  "links": [
+   {
+    "text": "Roadmap doc",
+    "href": "https://docs.zephyrtech.com/roadmap"
+   }
+  ],
+  "attachments": [
+   "roadmap.docx"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Security",
+  "from_addr": "no-reply@acmecloud-verify.live",
+  "reply_to": "",
+  "subject": "Final notice: verify your account",
+  "body": "Dear customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.acmecloud.com/secure",
+    "href": "https://185.23.44.10/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Sam",
+  "from_addr": "sam@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Reminder: timesheets due",
+  "body": "Hi Priya, please submit timesheets by Friday.",
+  "links": [],
+  "attachments": [
+   "notes.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Security",
+  "from_addr": "no-reply@acmecloud-verify.xyz",
+  "reply_to": "",
+  "subject": "Final notice: verify your account",
+  "body": "Dear customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.acmecloud.com/secure",
+    "href": "https://login-acmecloud.click/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Reminder: payment overdue",
+  "body": "Hi Sam, your October invoice is attached. It will be charged automatically on the 15th.",
+  "links": [],
+  "attachments": [
+   "invoice.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Security",
+  "from_addr": "no-reply@acmecloud-verify.top",
+  "reply_to": "",
+  "subject": "Payment overdue - invoice attached",
+  "body": "Dear valued customer, Your payment overdue notice is attached. Open the invoice attached immediately to avoid service interruption and update your payment details.",
+  "links": [],
+  "attachments": [
+   "invoice.iso"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Zephyr IT Security",
+  "from_addr": "security@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Action required: security training due",
+  "body": "Hi Elena, action required: complete your annual security training within 24 hours or your account will be locked until it's done.",
+  "links": [
+   {
+    "text": "Start training",
+    "href": "https://training.zephyrtech.com/start"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Security",
+  "from_addr": "no-reply@acmecloud-verify.info",
+  "reply_to": "",
+  "subject": "Shared document: Q3 budget",
+  "body": "Hi Sam, a file has been shared with you. Sign in to view it.",
+  "links": [
+   {
+    "text": "Open document",
+    "href": "https://docs-acmecloud.live/view"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Invoice for October",
+  "body": "Hi Priya, friendly reminder that invoice 1182 is now payment overdue. Invoice attached for your records.",
+  "links": [],
+  "attachments": [
+   "invoice.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Security",
+  "from_addr": "no-reply@payfl0w.com",
+  "reply_to": "help@outlook-help.xyz",
+  "subject": "Action required: your account is suspended",
+  "body": "Hello user, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.payflow.com/secure",
+    "href": "https://bit.ly/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Zephyr IT Security",
+  "from_addr": "security@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Action required: security training due",
+  "body": "Hi Priya, action required: complete your annual security training within 24 hours or your account will be locked until it's done.",
+  "links": [
+   {
+    "text": "Start training",
+    "href": "https://training.zephyrtech.com/start"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "no-reply@parcelgo-verify.xyz",
+  "reply_to": "",
+  "subject": "Payment overdue - invoice attached",
+  "body": "Dear valued customer, Your payment overdue notice is attached. Open the invoice attached immediately to avoid service interruption and update your payment details.",
+  "links": [],
+  "attachments": [
+   "Invoice_4471.html"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Password reset requested",
+  "body": "Hi Diego, you asked to reset your password. If this was you, use the link below. It expires today. If it wasn't you, ignore this email.",
+  "links": [
+   {
+    "text": "Reset password",
+    "href": "https://accounts.northbank.com/reset"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Accounts",
+  "from_addr": "accounts@northbank.com",
+  "reply_to": "",
+  "subject": "Updated remittance information",
+  "body": "Hi Hannah, please note our bank details have changed. Use the new account for this month's payment.",
+  "links": [],
+  "attachments": [
+   "new_bank_details.pdf"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "notifications@acmecloud.com",
+  "reply_to": "",
+  "subject": "Password reset requested",
+  "body": "Hi Hannah, you asked to reset your password. If this was you, use the link below. It expires today. If it wasn't you, ignore this email.",
+  "links": [
+   {
+    "text": "Reset password",
+    "href": "https://accounts.acmecloud.com/reset"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "no-reply@parcelg0.info",
+  "reply_to": "",
+  "subject": "Action required: your account is suspended",
+  "body": "Dear valued customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.parcelgo.com/secure",
+    "href": "https://185.23.44.10/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Zephyr IT Security",
+  "from_addr": "security@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Action required: security training due",
+  "body": "Hi Marcus, action required: complete your annual security training within 24 hours or your account will be locked until it's done.",
+  "links": [
+   {
+    "text": "Start training",
+    "href": "https://training.zephyrtech.com/start"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Security",
+  "from_addr": "no-reply@n0rthbank.top",
+  "reply_to": "",
+  "subject": "New voicemail received",
+  "body": "Hi Fatima, a file has been shared with you. Sign in to view it.",
+  "links": [
+   {
+    "text": "Open document",
+    "href": "https://northbank-drive.xyz/view"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Parcelgo",
+  "from_addr": "notifications@parcelgo.com",
+  "reply_to": "",
+  "subject": "Password reset requested",
+  "body": "Hi Wei, you asked to reset your password. If this was you, use the link below. It expires today. If it wasn't you, ignore this email.",
+  "links": [
+   {
+    "text": "Reset password",
+    "href": "https://accounts.parcelgo.com/reset"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Security",
+  "from_addr": "no-reply@northban.com",
+  "reply_to": "",
+  "subject": "Final notice: verify your account",
+  "body": "Dear customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.northbank.com/secure",
+    "href": "https://185.23.44.10/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Payflow",
+  "from_addr": "notifications@payflow.com",
+  "reply_to": "",
+  "subject": "What's new this month",
+  "body": "Hi Diego, here are this month's product updates and tips.",
+  "links": [
+   {
+    "text": "Read more",
+    "href": "https://news.payflow.com/october"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Accounts",
+  "from_addr": "accounts@parcelgo.com",
+  "reply_to": "",
+  "subject": "Updated remittance information",
+  "body": "Hi Fatima, our banking information has changed. Please send this month's payment to the new account in the attached letter.",
+  "links": [],
+  "attachments": [
+   "new_bank_details.pdf"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "notifications@acmecloud.com",
+  "reply_to": "",
+  "subject": "Password reset requested",
+  "body": "Hi Marcus, you asked to reset your password. If this was you, use the link below. It expires today. If it wasn't you, ignore this email.",
+  "links": [
+   {
+    "text": "Reset password",
+    "href": "https://accounts.acmecloud.com/reset"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "tracking@parce1go.top",
+  "reply_to": "",
+  "subject": "Your parcel could not be delivered",
+  "body": "Dear customer, We attempted delivery. A small fee is required. Confirm your details within 24 hours or the package will be returned.",
+  "links": [
+   {
+    "text": "Track parcel",
+    "href": "https://185.23.44.10/track"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Your monthly statement is ready",
+  "body": "Hi Diego, your order is on its way.",
+  "links": [
+   {
+    "text": "www.northbank.com/account",
+    "href": "https://www.northbank.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "tracking@parcelg0.com",
+  "reply_to": "",
+  "subject": "Your parcel could not be delivered",
+  "body": "Hi Hannah, We attempted delivery. A small fee is required. Confirm your details within 24 hours or the package will be returned.",
+  "links": [
+   {
+    "text": "Track parcel",
+    "href": "https://bit.ly/track"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Zephyr IT Security",
+  "from_addr": "security@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Action required: security training due",
+  "body": "Hi Sam, action required: complete your annual security training within 24 hours or your account will be locked until it's done.",
+  "links": [
+   {
+    "text": "Start training",
+    "href": "https://training.zephyrtech.com/start"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Security",
+  "from_addr": "no-reply@n0rthbank.xyz",
+  "reply_to": "",
+  "subject": "Outstanding invoice #4471",
+  "body": "Hello user, Your payment overdue notice is attached. Open the invoice attached immediately to avoid service interruption and update your payment details.",
+  "links": [],
+  "attachments": [
+   "statement.zip"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "notifications@acmecloud.com",
+  "reply_to": "",
+  "subject": "Your monthly statement is ready",
+  "body": "Hi Sam, your order is on its way.",
+  "links": [
+   {
+    "text": "www.acmecloud.com/account",
+    "href": "https://www.acmecloud.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "tracking@parce1go.com",
+  "reply_to": "help@mailbox.ru",
+  "subject": "Your parcel could not be delivered",
+  "body": "Dear valued customer, We attempted delivery. A small fee is required. Confirm your details within 24 hours or the package will be returned.",
+  "links": [
+   {
+    "text": "Track parcel",
+    "href": "https://bit.ly/track"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Zephyr IT Security",
+  "from_addr": "security@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Action required: security training due",
+  "body": "Hi Priya, action required: complete your annual security training within 24 hours or your account will be locked until it's done.",
+  "links": [
+   {
+    "text": "Start training",
+    "href": "https://training.zephyrtech.com/start"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Accounts",
+  "from_addr": "accounts@northbank.com",
+  "reply_to": "",
+  "subject": "Updated remittance information",
+  "body": "Hi Wei, please note our bank details have changed. Use the new account for this month's payment.",
+  "links": [],
+  "attachments": [
+   "new_bank_details.pdf"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Sam",
+  "from_addr": "sam@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Notes from today's standup",
+  "body": "Hi Priya, sharing the notes from today.",
+  "links": [
+   {
+    "text": "Roadmap doc",
+    "href": "https://docs.zephyrtech.com/roadmap"
+   }
+  ],
+  "attachments": [
+   "roadmap.docx"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Security",
+  "from_addr": "no-reply@acmecloud-verify.live",
+  "reply_to": "",
+  "subject": "Payment overdue - invoice attached",
+  "body": "Dear customer, Your payment overdue notice is attached. Open the invoice attached immediately to avoid service interruption and update your payment details.",
+  "links": [],
+  "attachments": [
+   "Invoice_4471.html"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "notifications@acmecloud.com",
+  "reply_to": "",
+  "subject": "Your order has shipped",
+  "body": "Hi Priya, your statement is available in the app.",
+  "links": [
+   {
+    "text": "www.acmecloud.com/account",
+    "href": "https://www.acmecloud.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "tracking@parcelg0.xyz",
+  "reply_to": "",
+  "subject": "Your parcel could not be delivered",
+  "body": "Dear valued customer, We attempted delivery. A small fee is required. Confirm your details within 24 hours or the package will be returned.",
+  "links": [
+   {
+    "text": "Track parcel",
+    "href": "https://login-acmecloud.click/track"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Zephyr IT Security",
+  "from_addr": "security@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Action required: security training due",
+  "body": "Hi Hannah, action required: complete your annual security training within 24 hours or your account will be locked until it's done.",
+  "links": [
+   {
+    "text": "Start training",
+    "href": "https://training.zephyrtech.com/start"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Accounts",
+  "from_addr": "accounts@acmecloud.com",
+  "reply_to": "",
+  "subject": "Updated remittance information",
+  "body": "Hi Diego, our banking information has changed. Please send this month's payment to the new account in the attached letter.",
+  "links": [],
+  "attachments": [
+   "new_bank_details.pdf"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Parcelgo",
+  "from_addr": "notifications@parcelgo.com",
+  "reply_to": "",
+  "subject": "Reminder: payment overdue",
+  "body": "Hi Wei, your October invoice is attached. It will be charged automatically on the 15th.",
+  "links": [],
+  "attachments": [
+   "invoice.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "tracking@parce1go.xyz",
+  "reply_to": "",
+  "subject": "Your parcel could not be delivered",
+  "body": "Dear customer, We attempted delivery. A small fee is required. Confirm your details within 24 hours or the package will be returned.",
+  "links": [
+   {
+    "text": "Track parcel",
+    "href": "https://login-parcelgo.click/track"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Reminder: payment overdue",
+  "body": "Hi Sam, your October invoice is attached. It will be charged automatically on the 15th.",
+  "links": [],
+  "attachments": [
+   "invoice.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "tracking@parcelg0.com",
+  "reply_to": "",
+  "subject": "Your parcel could not be delivered",
+  "body": "Hi Fatima, We attempted delivery. A small fee is required. Confirm your details within 24 hours or the package will be returned.",
+  "links": [
+   {
+    "text": "Track parcel",
+    "href": "https://bit.ly/track"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Payflow",
+  "from_addr": "offers@payflow.com",
+  "reply_to": "",
+  "subject": "Last chance: 20% off expires today",
+  "body": "Dear customer, last chance! Our sale expires today.",
+  "links": [
+   {
+    "text": "Shop now",
+    "href": "https://bit.ly/3xYz"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Security",
+  "from_addr": "no-reply@northban.live",
+  "reply_to": "",
+  "subject": "Outstanding invoice #4471",
+  "body": "Dear valued customer, Your payment overdue notice is attached. Open the invoice attached immediately to avoid service interruption and update your payment details.",
+  "links": [],
+  "attachments": [
+   "statement.zip"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Diego",
+  "from_addr": "diego@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Reminder: timesheets due",
+  "body": "Hi Marcus, can you review the draft by Thursday?",
+  "links": [
+   {
+    "text": "Roadmap doc",
+    "href": "https://docs.zephyrtech.com/roadmap"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Security",
+  "from_addr": "no-reply@northbank-verify.xyz",
+  "reply_to": "help@mailbox.ru",
+  "subject": "Final notice: verify your account",
+  "body": "Dear customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.northbank.com/secure",
+    "href": "https://bit.ly/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Payflow",
+  "from_addr": "notifications@payflow.com",
+  "reply_to": "",
+  "subject": "Invoice for October",
+  "body": "Hi Sam, your October invoice is attached. It will be charged automatically on the 15th.",
+  "links": [],
+  "attachments": [
+   "invoice.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Security",
+  "from_addr": "no-reply@northbank-verify.live",
+  "reply_to": "help@mailbox.ru",
+  "subject": "Action required: your account is suspended",
+  "body": "Hello user, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.northbank.com/secure",
+    "href": "https://northbank-verify.live/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Receipt for your payment",
+  "body": "Hi Priya, your order is on its way.",
+  "links": [
+   {
+    "text": "www.northbank.com/account",
+    "href": "https://www.northbank.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "tracking@parce1go.live",
+  "reply_to": "",
+  "subject": "Your parcel could not be delivered",
+  "body": "Hi Wei, We attempted delivery. A small fee is required. Confirm your details within 24 hours or the package will be returned.",
+  "links": [
+   {
+    "text": "Track parcel",
+    "href": "https://login-northbank.click/track"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Payflow",
+  "from_addr": "notifications@payflow.com",
+  "reply_to": "",
+  "subject": "Reminder: payment overdue",
+  "body": "Hi Fatima, your October invoice is attached. It will be charged automatically on the 15th.",
+  "links": [],
+  "attachments": [
+   "invoice.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "tracking@parce1go.live",
+  "reply_to": "",
+  "subject": "Your parcel could not be delivered",
+  "body": "Dear valued customer, We attempted delivery. A small fee is required. Confirm your details within 24 hours or the package will be returned.",
+  "links": [
+   {
+    "text": "Track parcel",
+    "href": "https://185.23.44.10/track"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Zephyr IT Security",
+  "from_addr": "security@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Action required: security training due",
+  "body": "Hi Diego, action required: complete your annual security training within 24 hours or your account will be locked until it's done.",
+  "links": [
+   {
+    "text": "Start training",
+    "href": "https://training.zephyrtech.com/start"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Security",
+  "from_addr": "no-reply@northbank-secure.top",
+  "reply_to": "help@mailbox.ru",
+  "subject": "Outstanding invoice #4471",
+  "body": "Hello user, Your payment overdue notice is attached. Open the invoice attached immediately to avoid service interruption and update your payment details.",
+  "links": [],
+  "attachments": [
+   "Invoice_4471.html"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Parcelgo",
+  "from_addr": "notifications@parcelgo.com",
+  "reply_to": "",
+  "subject": "Receipt for your payment",
+  "body": "Hi Marcus, thanks for your payment. No action is needed.",
+  "links": [
+   {
+    "text": "www.parcelgo.com/account",
+    "href": "https://www.parcelgo.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "tracking@parce1go.live",
+  "reply_to": "help@outlook-help.xyz",
+  "subject": "Your parcel could not be delivered",
+  "body": "Dear customer, We attempted delivery. A small fee is required. Confirm your details within 24 hours or the package will be returned.",
+  "links": [
+   {
+    "text": "Track parcel",
+    "href": "https://northbank-secure.live/track"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Elena",
+  "from_addr": "elena@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Reminder: timesheets due",
+  "body": "Hi Sam, lunch is at noon in the big room.",
+  "links": [],
+  "attachments": [
+   "roadmap.docx"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Zephyr CEO",
+  "from_addr": "exec.assistant@zephyr-tech.co",
+  "reply_to": "",
+  "subject": "Quick favor - urgent",
+  "body": "Hi Elena, are you at your desk? I need you to buy gift cards for a client today, it's urgent. Send me the codes asap. Don't call, I'm in a meeting.",
+  "links": [],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "notifications@acmecloud.com",
+  "reply_to": "",
+  "subject": "Last chance: early-bird webinar seats",
+  "body": "Hi Hannah, here are this month's product updates and tips.",
+  "links": [
+   {
+    "text": "Read more",
+    "href": "https://news.acmecloud.com/october"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Security",
+  "from_addr": "no-reply@acmecl0ud.xyz",
+  "reply_to": "",
+  "subject": "Action required: your account is suspended",
+  "body": "Dear valued customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.acmecloud.com/secure",
+    "href": "https://185.23.44.10/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "notifications@acmecloud.com",
+  "reply_to": "",
+  "subject": "Password reset requested",
+  "body": "Hi Diego, you asked to reset your password. If this was you, use the link below. It expires today. If it wasn't you, ignore this email.",
+  "links": [
+   {
+    "text": "Reset password",
+    "href": "https://accounts.acmecloud.com/reset"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "no-reply@parcelgo-secure.live",
+  "reply_to": "help@outlook-help.xyz",
+  "subject": "Unusual sign-in detected",
+  "body": "Hi Fatima, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.parcelgo.com/secure",
+    "href": "https://parcelgo-secure.live/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Parcelgo",
+  "from_addr": "notifications@parcelgo.com",
+  "reply_to": "",
+  "subject": "Reminder: payment overdue",
+  "body": "Hi Fatima, friendly reminder that invoice 1182 is now payment overdue. Invoice attached for your records.",
+  "links": [],
+  "attachments": [
+   "invoice.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Accounts",
+  "from_addr": "accounts@acmecloud.com",
+  "reply_to": "",
+  "subject": "Updated remittance information",
+  "body": "Hi Priya, our banking information has changed. Please send this month's payment to the new account in the attached letter.",
+  "links": [],
+  "attachments": [
+   "new_bank_details.pdf"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Parcelgo",
+  "from_addr": "offers@parcelgo.com",
+  "reply_to": "",
+  "subject": "Last chance: 20% off expires today",
+  "body": "Dear customer, last chance! Our sale expires today.",
+  "links": [
+   {
+    "text": "Shop now",
+    "href": "https://bit.ly/3xYz"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "no-reply@parcelgo-secure.com",
+  "reply_to": "",
+  "subject": "Unusual sign-in detected",
+  "body": "Hello user, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.parcelgo.com/secure",
+    "href": "https://185.23.44.10/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Hannah",
+  "from_addr": "hannah@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Notes from today's standup",
+  "body": "Hi Elena, sharing the notes from today.",
+  "links": [],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Security",
+  "from_addr": "no-reply@northban.xyz",
+  "reply_to": "",
+  "subject": "Outstanding invoice #4471",
+  "body": "Hello user, Your payment overdue notice is attached. Open the invoice attached immediately to avoid service interruption and update your payment details.",
+  "links": [],
+  "attachments": [
+   "invoice.iso"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Payflow",
+  "from_addr": "notifications@payflow.com",
+  "reply_to": "",
+  "subject": "Your monthly statement is ready",
+  "body": "Hi Fatima, your statement is available in the app.",
+  "links": [
+   {
+    "text": "www.payflow.com/account",
+    "href": "https://www.payflow.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "tracking@parce1go.top",
+  "reply_to": "",
+  "subject": "Your parcel could not be delivered",
+  "body": "Dear customer, We attempted delivery. A small fee is required. Confirm your details within 24 hours or the package will be returned.",
+  "links": [
+   {
+    "text": "Track parcel",
+    "href": "https://bit.ly/track"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Last chance: early-bird webinar seats",
+  "body": "Hi Priya, here are this month's product updates and tips.",
+  "links": [
+   {
+    "text": "Read more",
+    "href": "https://news.northbank.com/october"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Security",
+  "from_addr": "no-reply@payflo.live",
+  "reply_to": "",
+  "subject": "Shared document: Q3 budget",
+  "body": "Hi Priya, a file has been shared with you. Sign in to view it.",
+  "links": [
+   {
+    "text": "Open document",
+    "href": "https://docs-payflow.live/view"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "notifications@acmecloud.com",
+  "reply_to": "",
+  "subject": "Invoice for October",
+  "body": "Hi Elena, your October invoice is attached. It will be charged automatically on the 15th.",
+  "links": [],
+  "attachments": [
+   "invoice.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Zephyr CEO",
+  "from_addr": "ceo.office@gmail.com",
+  "reply_to": "",
+  "subject": "Quick favor - urgent",
+  "body": "Hi Diego, are you at your desk? I need you to buy gift cards for a client today, it's urgent. Send me the codes asap. Don't call, I'm in a meeting.",
+  "links": [],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Your order has shipped",
+  "body": "Hi Wei, thanks for your payment. No action is needed.",
+  "links": [
+   {
+    "text": "www.northbank.com/account",
+    "href": "https://www.northbank.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Security",
+  "from_addr": "no-reply@northbank-verify.live",
+  "reply_to": "help@outlook-help.xyz",
+  "subject": "Action required: your account is suspended",
+  "body": "Hi Diego, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.northbank.com/secure",
+    "href": "https://185.23.44.10/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Zephyr IT Security",
+  "from_addr": "security@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Action required: security training due",
+  "body": "Hi Elena, action required: complete your annual security training within 24 hours or your account will be locked until it's done.",
+  "links": [
+   {
+    "text": "Start training",
+    "href": "https://training.zephyrtech.com/start"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Security",
+  "from_addr": "no-reply@acmecloud-secure.xyz",
+  "reply_to": "",
+  "subject": "Final notice: verify your account",
+  "body": "Dear customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.acmecloud.com/secure",
+    "href": "https://login-acmecloud.click/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Diego",
+  "from_addr": "diego@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Draft roadmap for review",
+  "body": "Hi Wei, lunch is at noon in the big room.",
+  "links": [],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Security",
+  "from_addr": "no-reply@northbank-support.xyz",
+  "reply_to": "",
+  "subject": "Action required: your account is suspended",
+  "body": "Dear valued customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.northbank.com/secure",
+    "href": "https://login-northbank.click/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Payflow",
+  "from_addr": "notifications@payflow.com",
+  "reply_to": "",
+  "subject": "Your order has shipped",
+  "body": "Hi Diego, thanks for your payment. No action is needed.",
+  "links": [
+   {
+    "text": "www.payflow.com/account",
+    "href": "https://www.payflow.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Security",
+  "from_addr": "no-reply@northbank-secure.info",
+  "reply_to": "",
+  "subject": "New voicemail received",
+  "body": "Hi Marcus, a file has been shared with you. Sign in to view it.",
+  "links": [
+   {
+    "text": "Open document",
+    "href": "https://northbank-drive.xyz/view"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Marcus",
+  "from_addr": "marcus@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Team lunch Friday",
+  "body": "Hi Priya, can you review the draft by Thursday?",
+  "links": [
+   {
+    "text": "Roadmap doc",
+    "href": "https://docs.zephyrtech.com/roadmap"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Security",
+  "from_addr": "no-reply@northbank-secure.com",
+  "reply_to": "",
+  "subject": "Action required: your account is suspended",
+  "body": "Dear customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.northbank.com/secure",
+    "href": "https://northbank-secure.com/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Payflow",
+  "from_addr": "notifications@payflow.com",
+  "reply_to": "",
+  "subject": "Your monthly statement is ready",
+  "body": "Hi Marcus, your statement is available in the app.",
+  "links": [
+   {
+    "text": "www.payflow.com/account",
+    "href": "https://www.payflow.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Security",
+  "from_addr": "no-reply@acmecloud-support.com",
+  "reply_to": "",
+  "subject": "Unusual sign-in detected",
+  "body": "Dear customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.acmecloud.com/secure",
+    "href": "https://login-acmecloud.click/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Wei",
+  "from_addr": "wei@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Draft roadmap for review",
+  "body": "Hi Sam, lunch is at noon in the big room.",
+  "links": [
+   {
+    "text": "Roadmap doc",
+    "href": "https://docs.zephyrtech.com/roadmap"
+   }
+  ],
+  "attachments": [
+   "notes.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Security",
+  "from_addr": "no-reply@n0rthbank.xyz",
+  "reply_to": "help@outlook-help.xyz",
+  "subject": "Outstanding invoice #4471",
+  "body": "Hello user, Your payment overdue notice is attached. Open the invoice attached immediately to avoid service interruption and update your payment details.",
+  "links": [],
+  "attachments": [
+   "invoice.iso"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Priya",
+  "from_addr": "priya@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Reminder: timesheets due",
+  "body": "Hi Diego, sharing the notes from today.",
+  "links": [
+   {
+    "text": "Roadmap doc",
+    "href": "https://docs.zephyrtech.com/roadmap"
+   }
+  ],
+  "attachments": [
+   "notes.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Security",
+  "from_addr": "no-reply@northban.live",
+  "reply_to": "help@mailbox.ru",
+  "subject": "Unusual sign-in detected",
+  "body": "Hello user, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.northbank.com/secure",
+    "href": "https://bit.ly/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Your monthly statement is ready",
+  "body": "Hi Wei, your order is on its way.",
+  "links": [
+   {
+    "text": "www.northbank.com/account",
+    "href": "https://www.northbank.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Security",
+  "from_addr": "no-reply@payflow-secure.info",
+  "reply_to": "help@mailbox.ru",
+  "subject": "New voicemail received",
+  "body": "Hi Elena, a file has been shared with you. Sign in to view it.",
+  "links": [
+   {
+    "text": "Open document",
+    "href": "https://share-files.top/view"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "notifications@acmecloud.com",
+  "reply_to": "",
+  "subject": "Your monthly statement is ready",
+  "body": "Hi Hannah, thanks for your payment. No action is needed.",
+  "links": [
+   {
+    "text": "www.acmecloud.com/account",
+    "href": "https://www.acmecloud.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Accounts",
+  "from_addr": "accounts@northbank.com",
+  "reply_to": "",
+  "subject": "Updated remittance information",
+  "body": "Hi Diego, our banking information has changed. Please send this month's payment to the new account in the attached letter.",
+  "links": [],
+  "attachments": [
+   "new_bank_details.pdf"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Priya",
+  "from_addr": "priya@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Draft roadmap for review",
+  "body": "Hi Diego, can you review the draft by Thursday?",
+  "links": [
+   {
+    "text": "Roadmap doc",
+    "href": "https://docs.zephyrtech.com/roadmap"
+   }
+  ],
+  "attachments": [
+   "notes.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Security",
+  "from_addr": "no-reply@payflo.live",
+  "reply_to": "help@outlook-help.xyz",
+  "subject": "Action required: your account is suspended",
+  "body": "Dear valued customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.payflow.com/secure",
+    "href": "https://185.23.44.10/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Fatima",
+  "from_addr": "fatima@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Notes from today's standup",
+  "body": "Hi Fatima, please submit timesheets by Friday.",
+  "links": [
+   {
+    "text": "Roadmap doc",
+    "href": "https://docs.zephyrtech.com/roadmap"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Zephyr CEO",
+  "from_addr": "exec.assistant@gmail.com",
+  "reply_to": "",
+  "subject": "Quick favor - urgent",
+  "body": "Hi Sam, are you at your desk? I need you to buy gift cards for a client today, it's urgent. Send me the codes asap. Don't call, I'm in a meeting.",
+  "links": [],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Parcelgo",
+  "from_addr": "offers@parcelgo.com",
+  "reply_to": "",
+  "subject": "Last chance: 20% off expires today",
+  "body": "Dear customer, last chance! Our sale expires today.",
+  "links": [
+   {
+    "text": "Shop now",
+    "href": "https://bit.ly/3xYz"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "no-reply@parcelg.top",
+  "reply_to": "",
+  "subject": "New voicemail received",
+  "body": "Hi Elena, a file has been shared with you. Sign in to view it.",
+  "links": [
+   {
+    "text": "Open document",
+    "href": "https://docs-parcelgo.live/view"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "notifications@acmecloud.com",
+  "reply_to": "",
+  "subject": "What's new this month",
+  "body": "Hi Marcus, here are this month's product updates and tips.",
+  "links": [
+   {
+    "text": "Read more",
+    "href": "https://news.acmecloud.com/october"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Security",
+  "from_addr": "no-reply@acmecloud-verify.top",
+  "reply_to": "",
+  "subject": "Unusual sign-in detected",
+  "body": "Hello user, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.acmecloud.com/secure",
+    "href": "https://185.23.44.10/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Sam",
+  "from_addr": "sam@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Reminder: timesheets due",
+  "body": "Hi Wei, please submit timesheets by Friday.",
+  "links": [],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Zephyr CEO",
+  "from_addr": "ceo.office@zephyr-tech.co",
+  "reply_to": "",
+  "subject": "Quick favor - urgent",
+  "body": "Hi Diego, are you at your desk? I need you to buy gift cards for a client today, it's urgent. Send me the codes asap. Don't call, I'm in a meeting.",
+  "links": [],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Diego",
+  "from_addr": "diego@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Reminder: timesheets due",
+  "body": "Hi Sam, can you review the draft by Thursday?",
+  "links": [],
+  "attachments": [
+   "roadmap.docx"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "tracking@parcelgo-delivery.info",
+  "reply_to": "",
+  "subject": "Your parcel could not be delivered",
+  "body": "Hello user, We attempted delivery. A small fee is required. Confirm your details within 24 hours or the package will be returned.",
+  "links": [
+   {
+    "text": "Track parcel",
+    "href": "https://acmecloud-secure.info/track"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Payflow",
+  "from_addr": "notifications@payflow.com",
+  "reply_to": "",
+  "subject": "Your order has shipped",
+  "body": "Hi Wei, your order is on its way.",
+  "links": [
+   {
+    "text": "www.payflow.com/account",
+    "href": "https://www.payflow.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Zephyr CEO",
+  "from_addr": "exec.assistant@zephyr-tech.co",
+  "reply_to": "",
+  "subject": "Quick favor - urgent",
+  "body": "Hi Marcus, are you at your desk? I need you to buy gift cards for a client today, it's urgent. Send me the codes asap. Don't call, I'm in a meeting.",
+  "links": [],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Sam",
+  "from_addr": "sam@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Notes from today's standup",
+  "body": "Hi Wei, can you review the draft by Thursday?",
+  "links": [
+   {
+    "text": "Roadmap doc",
+    "href": "https://docs.zephyrtech.com/roadmap"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Security",
+  "from_addr": "no-reply@payflo.top",
+  "reply_to": "",
+  "subject": "New voicemail received",
+  "body": "Hi Diego, a file has been shared with you. Sign in to view it.",
+  "links": [
+   {
+    "text": "Open document",
+    "href": "https://payflow-drive.xyz/view"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Receipt for your payment",
+  "body": "Hi Diego, thanks for your payment. No action is needed.",
+  "links": [
+   {
+    "text": "www.northbank.com/account",
+    "href": "https://www.northbank.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "no-reply@parcelgo-secure.xyz",
+  "reply_to": "",
+  "subject": "Payment overdue - invoice attached",
+  "body": "Hi Diego, Your payment overdue notice is attached. Open the invoice attached immediately to avoid service interruption and update your payment details.",
+  "links": [],
+  "attachments": [
+   "Invoice_4471.html"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Password reset requested",
+  "body": "Hi Wei, you asked to reset your password. If this was you, use the link below. It expires today. If it wasn't you, ignore this email.",
+  "links": [
+   {
+    "text": "Reset password",
+    "href": "https://accounts.northbank.com/reset"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Zephyr CEO",
+  "from_addr": "ceo.office@zephyrtech-mail.com",
+  "reply_to": "",
+  "subject": "Quick favor - urgent",
+  "body": "Hi Elena, are you at your desk? I need you to buy gift cards for a client today, it's urgent. Send me the codes asap. Don't call, I'm in a meeting.",
+  "links": [],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Hannah",
+  "from_addr": "hannah@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Notes from today's standup",
+  "body": "Hi Sam, can you review the draft by Thursday?",
+  "links": [
+   {
+    "text": "Roadmap doc",
+    "href": "https://docs.zephyrtech.com/roadmap"
+   }
+  ],
+  "attachments": [
+   "roadmap.docx"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Accounts",
+  "from_addr": "accounts@acmecloud.com",
+  "reply_to": "",
+  "subject": "Updated remittance information",
+  "body": "Hi Wei, our banking information has changed. Please send this month's payment to the new account in the attached letter.",
+  "links": [],
+  "attachments": [
+   "new_bank_details.pdf"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "notifications@acmecloud.com",
+  "reply_to": "",
+  "subject": "Last chance: early-bird webinar seats",
+  "body": "Hi Diego, here are this month's product updates and tips.",
+  "links": [
+   {
+    "text": "Read more",
+    "href": "https://news.acmecloud.com/october"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Security",
+  "from_addr": "no-reply@n0rthbank.xyz",
+  "reply_to": "help@support-desk.info",
+  "subject": "Unusual sign-in detected",
+  "body": "Hello user, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.northbank.com/secure",
+    "href": "https://185.23.44.10/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Elena",
+  "from_addr": "elena@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Draft roadmap for review",
+  "body": "Hi Fatima, please submit timesheets by Friday.",
+  "links": [],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Accounts",
+  "from_addr": "accounts@acmecloud.com",
+  "reply_to": "",
+  "subject": "Updated remittance information",
+  "body": "Hi Marcus, our banking information has changed. Please send this month's payment to the new account in the attached letter.",
+  "links": [],
+  "attachments": [
+   "new_bank_details.pdf"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "notifications@acmecloud.com",
+  "reply_to": "",
+  "subject": "What's new this month",
+  "body": "Hi Marcus, here are this month's product updates and tips.",
+  "links": [
+   {
+    "text": "Read more",
+    "href": "https://news.acmecloud.com/october"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Accounts",
+  "from_addr": "accounts@acmecloud.com",
+  "reply_to": "",
+  "subject": "Updated remittance information",
+  "body": "Hi Marcus, our banking information has changed. Please send this month's payment to the new account in the attached letter.",
+  "links": [],
+  "attachments": [
+   "new_bank_details.pdf"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "notifications@acmecloud.com",
+  "reply_to": "",
+  "subject": "Receipt for your payment",
+  "body": "Hi Hannah, your statement is available in the app.",
+  "links": [
+   {
+    "text": "www.acmecloud.com/account",
+    "href": "https://www.acmecloud.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Security",
+  "from_addr": "no-reply@payflow-secure.live",
+  "reply_to": "",
+  "subject": "Action required: your account is suspended",
+  "body": "Hi Wei, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.payflow.com/secure",
+    "href": "https://bit.ly/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Payflow",
+  "from_addr": "offers@payflow.com",
+  "reply_to": "",
+  "subject": "Last chance: 20% off expires today",
+  "body": "Dear customer, last chance! Our sale expires today.",
+  "links": [
+   {
+    "text": "Shop now",
+    "href": "https://bit.ly/3xYz"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Security",
+  "from_addr": "no-reply@payflow-support.info",
+  "reply_to": "",
+  "subject": "Action required: your account is suspended",
+  "body": "Dear valued customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.payflow.com/secure",
+    "href": "https://payflow-support.info/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Zephyr IT Security",
+  "from_addr": "security@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Action required: security training due",
+  "body": "Hi Wei, action required: complete your annual security training within 24 hours or your account will be locked until it's done.",
+  "links": [
+   {
+    "text": "Start training",
+    "href": "https://training.zephyrtech.com/start"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "tracking@parce1go.info",
+  "reply_to": "",
+  "subject": "Your parcel could not be delivered",
+  "body": "Dear valued customer, We attempted delivery. A small fee is required. Confirm your details within 24 hours or the package will be returned.",
+  "links": [
+   {
+    "text": "Track parcel",
+    "href": "https://login-payflow.click/track"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Fatima",
+  "from_addr": "fatima@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Team lunch Friday",
+  "body": "Hi Priya, please submit timesheets by Friday.",
+  "links": [
+   {
+    "text": "Roadmap doc",
+    "href": "https://docs.zephyrtech.com/roadmap"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Security",
+  "from_addr": "no-reply@northbank-support.info",
+  "reply_to": "help@outlook-help.xyz",
+  "subject": "New voicemail received",
+  "body": "Hi Fatima, a file has been shared with you. Sign in to view it.",
+  "links": [
+   {
+    "text": "Open document",
+    "href": "https://share-files.top/view"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Payflow",
+  "from_addr": "notifications@payflow.com",
+  "reply_to": "",
+  "subject": "Your order has shipped",
+  "body": "Hi Wei, your order is on its way.",
+  "links": [
+   {
+    "text": "www.payflow.com/account",
+    "href": "https://www.payflow.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Accounts",
+  "from_addr": "accounts@payflow.com",
+  "reply_to": "",
+  "subject": "Updated remittance information",
+  "body": "Hi Diego, our banking information has changed. Please send this month's payment to the new account in the attached letter.",
+  "links": [],
+  "attachments": [
+   "new_bank_details.pdf"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Parcelgo",
+  "from_addr": "offers@parcelgo.com",
+  "reply_to": "",
+  "subject": "Last chance: 20% off expires today",
+  "body": "Dear customer, last chance! Our sale expires today.",
+  "links": [
+   {
+    "text": "Shop now",
+    "href": "https://bit.ly/3xYz"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Security",
+  "from_addr": "no-reply@acmecloud-verify.com",
+  "reply_to": "",
+  "subject": "Payment overdue - invoice attached",
+  "body": "Hello user, Your payment overdue notice is attached. Open the invoice attached immediately to avoid service interruption and update your payment details.",
+  "links": [],
+  "attachments": [
+   "Invoice_4471.html"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "offers@northbank.com",
+  "reply_to": "",
+  "subject": "Last chance: 20% off expires today",
+  "body": "Dear customer, last chance! Our sale expires today.",
+  "links": [
+   {
+    "text": "Shop now",
+    "href": "https://bit.ly/3xYz"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Security",
+  "from_addr": "no-reply@payfl0w.com",
+  "reply_to": "",
+  "subject": "Final notice: verify your account",
+  "body": "Dear valued customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.payflow.com/secure",
+    "href": "https://185.23.44.10/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "offers@acmecloud.com",
+  "reply_to": "",
+  "subject": "Last chance: 20% off expires today",
+  "body": "Dear customer, last chance! Our sale expires today.",
+  "links": [
+   {
+    "text": "Shop now",
+    "href": "https://bit.ly/3xYz"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Security",
+  "from_addr": "no-reply@northbank-support.com",
+  "reply_to": "help@mailbox.ru",
+  "subject": "Shared document: Q3 budget",
+  "body": "Hi Priya, a file has been shared with you. Sign in to view it.",
+  "links": [
+   {
+    "text": "Open document",
+    "href": "https://share-files.top/view"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Elena",
+  "from_addr": "elena@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Draft roadmap for review",
+  "body": "Hi Fatima, lunch is at noon in the big room.",
+  "links": [
+   {
+    "text": "Roadmap doc",
+    "href": "https://docs.zephyrtech.com/roadmap"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Security",
+  "from_addr": "no-reply@payflow-secure.xyz",
+  "reply_to": "",
+  "subject": "Final notice: verify your account",
+  "body": "Dear customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.payflow.com/secure",
+    "href": "https://185.23.44.10/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Diego",
+  "from_addr": "diego@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Reminder: timesheets due",
+  "body": "Hi Diego, sharing the notes from today.",
+  "links": [],
+  "attachments": [
+   "roadmap.docx"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Security",
+  "from_addr": "no-reply@payflo.live",
+  "reply_to": "",
+  "subject": "Shared document: Q3 budget",
+  "body": "Hi Marcus, a file has been shared with you. Sign in to view it.",
+  "links": [
+   {
+    "text": "Open document",
+    "href": "https://payflow-drive.xyz/view"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Payflow",
+  "from_addr": "notifications@payflow.com",
+  "reply_to": "",
+  "subject": "Your monthly statement is ready",
+  "body": "Hi Priya, your statement is available in the app.",
+  "links": [
+   {
+    "text": "www.payflow.com/account",
+    "href": "https://www.payflow.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Accounts",
+  "from_addr": "accounts@northbank.com",
+  "reply_to": "",
+  "subject": "Updated remittance information",
+  "body": "Hi Wei, please note our bank details have changed. Use the new account for this month's payment.",
+  "links": [],
+  "attachments": [
+   "new_bank_details.pdf"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Zephyr IT Security",
+  "from_addr": "security@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Action required: security training due",
+  "body": "Hi Elena, action required: complete your annual security training within 24 hours or your account will be locked until it's done.",
+  "links": [
+   {
+    "text": "Start training",
+    "href": "https://training.zephyrtech.com/start"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Security",
+  "from_addr": "no-reply@n0rthbank.top",
+  "reply_to": "",
+  "subject": "New voicemail received",
+  "body": "Hi Wei, a file has been shared with you. Sign in to view it.",
+  "links": [
+   {
+    "text": "Open document",
+    "href": "https://docs-northbank.live/view"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Priya",
+  "from_addr": "priya@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Team lunch Friday",
+  "body": "Hi Priya, please submit timesheets by Friday.",
+  "links": [
+   {
+    "text": "Roadmap doc",
+    "href": "https://docs.zephyrtech.com/roadmap"
+   }
+  ],
+  "attachments": [
+   "notes.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Security",
+  "from_addr": "no-reply@acmecloud-verify.live",
+  "reply_to": "",
+  "subject": "Unusual sign-in detected",
+  "body": "Hello user, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.acmecloud.com/secure",
+    "href": "https://185.23.44.10/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Parcelgo",
+  "from_addr": "notifications@parcelgo.com",
+  "reply_to": "",
+  "subject": "Receipt for your payment",
+  "body": "Hi Marcus, your statement is available in the app.",
+  "links": [
+   {
+    "text": "www.parcelgo.com/account",
+    "href": "https://www.parcelgo.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Accounts",
+  "from_addr": "accounts@parcelgo.com",
+  "reply_to": "",
+  "subject": "Updated remittance information",
+  "body": "Hi Wei, please note our bank details have changed. Use the new account for this month's payment.",
+  "links": [],
+  "attachments": [
+   "new_bank_details.pdf"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "notifications@acmecloud.com",
+  "reply_to": "",
+  "subject": "Password reset requested",
+  "body": "Hi Priya, you asked to reset your password. If this was you, use the link below. It expires today. If it wasn't you, ignore this email.",
+  "links": [
+   {
+    "text": "Reset password",
+    "href": "https://accounts.acmecloud.com/reset"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "no-reply@parcelg.info",
+  "reply_to": "",
+  "subject": "Final notice: verify your account",
+  "body": "Hi Diego, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.parcelgo.com/secure",
+    "href": "https://185.23.44.10/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Parcelgo",
+  "from_addr": "notifications@parcelgo.com",
+  "reply_to": "",
+  "subject": "Last chance: early-bird webinar seats",
+  "body": "Hi Priya, here are this month's product updates and tips.",
+  "links": [
+   {
+    "text": "Read more",
+    "href": "https://news.parcelgo.com/october"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Zephyr CEO",
+  "from_addr": "ceo.office@zephyr-tech.co",
+  "reply_to": "",
+  "subject": "Quick favor - urgent",
+  "body": "Hi Hannah, are you at your desk? I need you to buy gift cards for a client today, it's urgent. Send me the codes asap. Don't call, I'm in a meeting.",
+  "links": [],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Payflow",
+  "from_addr": "notifications@payflow.com",
+  "reply_to": "",
+  "subject": "Password reset requested",
+  "body": "Hi Marcus, you asked to reset your password. If this was you, use the link below. It expires today. If it wasn't you, ignore this email.",
+  "links": [
+   {
+    "text": "Reset password",
+    "href": "https://accounts.payflow.com/reset"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Security",
+  "from_addr": "no-reply@payflow-support.top",
+  "reply_to": "",
+  "subject": "Payment overdue - invoice attached",
+  "body": "Hi Priya, Your payment overdue notice is attached. Open the invoice attached immediately to avoid service interruption and update your payment details.",
+  "links": [],
+  "attachments": [
+   "invoice.iso"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Reminder: payment overdue",
+  "body": "Hi Hannah, your October invoice is attached. It will be charged automatically on the 15th.",
+  "links": [],
+  "attachments": [
+   "invoice.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Zephyr CEO",
+  "from_addr": "ceo.office@zephyrtech-mail.com",
+  "reply_to": "",
+  "subject": "Quick favor - urgent",
+  "body": "Hi Sam, are you at your desk? I need you to buy gift cards for a client today, it's urgent. Send me the codes asap. Don't call, I'm in a meeting.",
+  "links": [],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "notifications@acmecloud.com",
+  "reply_to": "",
+  "subject": "Receipt for your payment",
+  "body": "Hi Marcus, your order is on its way.",
+  "links": [
+   {
+    "text": "www.acmecloud.com/account",
+    "href": "https://www.acmecloud.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "no-reply@parcelg.live",
+  "reply_to": "",
+  "subject": "Payment overdue - invoice attached",
+  "body": "Dear valued customer, Your payment overdue notice is attached. Open the invoice attached immediately to avoid service interruption and update your payment details.",
+  "links": [],
+  "attachments": [
+   "INV-2026.xlsm"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Password reset requested",
+  "body": "Hi Hannah, you asked to reset your password. If this was you, use the link below. It expires today. If it wasn't you, ignore this email.",
+  "links": [
+   {
+    "text": "Reset password",
+    "href": "https://accounts.northbank.com/reset"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Security",
+  "from_addr": "no-reply@acmecl0ud.live",
+  "reply_to": "",
+  "subject": "Action required: your account is suspended",
+  "body": "Hello user, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.acmecloud.com/secure",
+    "href": "https://acmecl0ud.live/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Zephyr IT Security",
+  "from_addr": "security@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Action required: security training due",
+  "body": "Hi Sam, action required: complete your annual security training within 24 hours or your account will be locked until it's done.",
+  "links": [
+   {
+    "text": "Start training",
+    "href": "https://training.zephyrtech.com/start"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "no-reply@parcelg0.info",
+  "reply_to": "",
+  "subject": "Action required: your account is suspended",
+  "body": "Dear valued customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.parcelgo.com/secure",
+    "href": "https://login-parcelgo.click/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Your monthly statement is ready",
+  "body": "Hi Diego, your statement is available in the app.",
+  "links": [
+   {
+    "text": "www.northbank.com/account",
+    "href": "https://www.northbank.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Accounts",
+  "from_addr": "accounts@payflow.com",
+  "reply_to": "",
+  "subject": "Updated remittance information",
+  "body": "Hi Marcus, please note our bank details have changed. Use the new account for this month's payment.",
+  "links": [],
+  "attachments": [
+   "new_bank_details.pdf"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "notifications@acmecloud.com",
+  "reply_to": "",
+  "subject": "What's new this month",
+  "body": "Hi Fatima, here are this month's product updates and tips.",
+  "links": [
+   {
+    "text": "Read more",
+    "href": "https://news.acmecloud.com/october"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Accounts",
+  "from_addr": "accounts@acmecloud.com",
+  "reply_to": "",
+  "subject": "Updated remittance information",
+  "body": "Hi Elena, please note our bank details have changed. Use the new account for this month's payment.",
+  "links": [],
+  "attachments": [
+   "new_bank_details.pdf"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "What's new this month",
+  "body": "Hi Fatima, here are this month's product updates and tips.",
+  "links": [
+   {
+    "text": "Read more",
+    "href": "https://news.northbank.com/october"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Security",
+  "from_addr": "no-reply@n0rthbank.live",
+  "reply_to": "help@mailbox.ru",
+  "subject": "Shared document: Q3 budget",
+  "body": "Hi Fatima, a file has been shared with you. Sign in to view it.",
+  "links": [
+   {
+    "text": "Open document",
+    "href": "https://docs-northbank.live/view"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Last chance: early-bird webinar seats",
+  "body": "Hi Hannah, here are this month's product updates and tips.",
+  "links": [
+   {
+    "text": "Read more",
+    "href": "https://news.northbank.com/october"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "tracking@parcelgo-delivery.xyz",
+  "reply_to": "",
+  "subject": "Your parcel could not be delivered",
+  "body": "Hello user, We attempted delivery. A small fee is required. Confirm your details within 24 hours or the package will be returned.",
+  "links": [
+   {
+    "text": "Track parcel",
+    "href": "https://185.23.44.10/track"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Your order has shipped",
+  "body": "Hi Elena, thanks for your payment. No action is needed.",
+  "links": [
+   {
+    "text": "www.northbank.com/account",
+    "href": "https://www.northbank.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Accounts",
+  "from_addr": "accounts@acmecloud.com",
+  "reply_to": "",
+  "subject": "Updated remittance information",
+  "body": "Hi Hannah, please note our bank details have changed. Use the new account for this month's payment.",
+  "links": [],
+  "attachments": [
+   "new_bank_details.pdf"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Reminder: payment overdue",
+  "body": "Hi Priya, friendly reminder that invoice 1182 is now payment overdue. Invoice attached for your records.",
+  "links": [],
+  "attachments": [
+   "invoice.pdf"
+  ],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "no-reply@parcelgo-support.info",
+  "reply_to": "",
+  "subject": "Action required: your account is suspended",
+  "body": "Dear valued customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.parcelgo.com/secure",
+    "href": "https://login-parcelgo.click/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "notifications@acmecloud.com",
+  "reply_to": "",
+  "subject": "Your order has shipped",
+  "body": "Hi Hannah, your statement is available in the app.",
+  "links": [
+   {
+    "text": "www.acmecloud.com/account",
+    "href": "https://www.acmecloud.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "no-reply@parcelgo-verify.info",
+  "reply_to": "",
+  "subject": "Final notice: verify your account",
+  "body": "Dear customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.parcelgo.com/secure",
+    "href": "https://login-parcelgo.click/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Payflow",
+  "from_addr": "notifications@payflow.com",
+  "reply_to": "",
+  "subject": "Your monthly statement is ready",
+  "body": "Hi Wei, your order is on its way.",
+  "links": [
+   {
+    "text": "www.payflow.com/account",
+    "href": "https://www.payflow.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Security",
+  "from_addr": "no-reply@payflow-verify.com",
+  "reply_to": "",
+  "subject": "Unusual sign-in detected",
+  "body": "Dear valued customer, We detected unusual activity. Please verify your account within 24 hours or it will be locked. Click below to sign in to restore access.",
+  "links": [
+   {
+    "text": "www.payflow.com/secure",
+    "href": "https://185.23.44.10/auth"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Payflow",
+  "from_addr": "notifications@payflow.com",
+  "reply_to": "",
+  "subject": "Your order has shipped",
+  "body": "Hi Fatima, your statement is available in the app.",
+  "links": [
+   {
+    "text": "www.payflow.com/account",
+    "href": "https://www.payflow.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Acmecloud Security",
+  "from_addr": "no-reply@acmecloud-secure.info",
+  "reply_to": "",
+  "subject": "Outstanding invoice #4471",
+  "body": "Dear valued customer, Your payment overdue notice is attached. Open the invoice attached immediately to avoid service interruption and update your payment details.",
+  "links": [],
+  "attachments": [
+   "statement.zip"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Zephyr IT Security",
+  "from_addr": "security@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Action required: security training due",
+  "body": "Hi Fatima, action required: complete your annual security training within 24 hours or your account will be locked until it's done.",
+  "links": [
+   {
+    "text": "Start training",
+    "href": "https://training.zephyrtech.com/start"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Payflow Accounts",
+  "from_addr": "accounts@payflow.com",
+  "reply_to": "",
+  "subject": "Updated remittance information",
+  "body": "Hi Priya, our banking information has changed. Please send this month's payment to the new account in the attached letter.",
+  "links": [],
+  "attachments": [
+   "new_bank_details.pdf"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "notifications@acmecloud.com",
+  "reply_to": "",
+  "subject": "Your monthly statement is ready",
+  "body": "Hi Wei, your statement is available in the app.",
+  "links": [
+   {
+    "text": "www.acmecloud.com/account",
+    "href": "https://www.acmecloud.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Zephyr CEO",
+  "from_addr": "exec.assistant@zephyrtech-mail.com",
+  "reply_to": "",
+  "subject": "Quick favor - urgent",
+  "body": "Hi Sam, are you at your desk? I need you to buy gift cards for a client today, it's urgent. Send me the codes asap. Don't call, I'm in a meeting.",
+  "links": [],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Parcelgo",
+  "from_addr": "notifications@parcelgo.com",
+  "reply_to": "",
+  "subject": "Your monthly statement is ready",
+  "body": "Hi Sam, your statement is available in the app.",
+  "links": [
+   {
+    "text": "www.parcelgo.com/account",
+    "href": "https://www.parcelgo.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Accounts",
+  "from_addr": "accounts@parcelgo.com",
+  "reply_to": "",
+  "subject": "Updated remittance information",
+  "body": "Hi Hannah, please note our bank details have changed. Use the new account for this month's payment.",
+  "links": [],
+  "attachments": [
+   "new_bank_details.pdf"
+  ],
+  "label": 1
+ },
+ {
+  "from_name": "Hannah",
+  "from_addr": "hannah@zephyrtech.com",
+  "reply_to": "",
+  "subject": "Notes from today's standup",
+  "body": "Hi Diego, lunch is at noon in the big room.",
+  "links": [],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "no-reply@parcelgo-secure.top",
+  "reply_to": "help@support-desk.info",
+  "subject": "New voicemail received",
+  "body": "Hi Marcus, a file has been shared with you. Sign in to view it.",
+  "links": [
+   {
+    "text": "Open document",
+    "href": "https://docs-parcelgo.live/view"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Payflow",
+  "from_addr": "notifications@payflow.com",
+  "reply_to": "",
+  "subject": "Receipt for your payment",
+  "body": "Hi Fatima, your statement is available in the app.",
+  "links": [
+   {
+    "text": "www.payflow.com/account",
+    "href": "https://www.payflow.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Parcelgo Security",
+  "from_addr": "tracking@parcelg0.info",
+  "reply_to": "",
+  "subject": "Your parcel could not be delivered",
+  "body": "Dear valued customer, We attempted delivery. A small fee is required. Confirm your details within 24 hours or the package will be returned.",
+  "links": [
+   {
+    "text": "Track parcel",
+    "href": "https://parcelgo-secure.info/track"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Northbank",
+  "from_addr": "notifications@northbank.com",
+  "reply_to": "",
+  "subject": "Your order has shipped",
+  "body": "Hi Elena, your order is on its way.",
+  "links": [
+   {
+    "text": "www.northbank.com/account",
+    "href": "https://www.northbank.com/account"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ },
+ {
+  "from_name": "Northbank Security",
+  "from_addr": "no-reply@northbank-secure.com",
+  "reply_to": "",
+  "subject": "New voicemail received",
+  "body": "Hi Sam, a file has been shared with you. Sign in to view it.",
+  "links": [
+   {
+    "text": "Open document",
+    "href": "https://northbank-drive.xyz/view"
+   }
+  ],
+  "attachments": [],
+  "label": 1
+ },
+ {
+  "from_name": "Acmecloud",
+  "from_addr": "notifications@acmecloud.com",
+  "reply_to": "",
+  "subject": "Password reset requested",
+  "body": "Hi Marcus, you asked to reset your password. If this was you, use the link below. It expires today. If it wasn't you, ignore this email.",
+  "links": [
+   {
+    "text": "Reset password",
+    "href": "https://accounts.acmecloud.com/reset"
+   }
+  ],
+  "attachments": [],
+  "label": 0
+ }
+]

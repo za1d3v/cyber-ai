@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vulnerability Prioritizer — Live Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="demo.css">
+<style>
+  input[type=range] { width: 100%; accent-color: var(--accent); }
+  .cmp { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 600px) { .cmp { grid-template-columns: 1fr; } }
+  .cmp > div { border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
+  .big { font-size: 36px; font-weight: 700; letter-spacing: -0.02em; }
+  .kev { font-size: 11px; font-weight: 700; padding: 1px 6px; border-radius: 5px; background: #fde2df; color: #b42318; }
+  @media (prefers-color-scheme: dark) { .kev { background: #4a1f1b; color: #ff9b8f; } }
+  .fixed td { background: var(--accent-soft); }
+  canvas { width: 100%; height: auto; display: block; }
+  .legend { display: flex; gap: 16px; font-size: 13px; color: var(--muted); flex-wrap: wrap; }
+  .legend i { display: inline-block; width: 14px; height: 3px; margin-right: 6px; vertical-align: 3px; }
+  td.num { font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><a class="brand" href="../">← Zitao Wang · Cyber-AI</a>
+    <a href="https://github.com/za1d3v/Cyber-AI/tree/main/projects/06-vuln-prioritizer">View the code</a></nav>
+
+  <span class="eyebrow">Live demo · Vulnerability management</span>
+  <h1>Risk-Based Vulnerability Prioritizer</h1>
+  <p class="lede">A scanner found 60 vulnerabilities, 43 of them "High" or "Critical". The team can fix about 10 this sprint. Which 10?
+    Compare sorting by CVSS severity with ranking by real-world risk: exploit likelihood, known exploitation, internet exposure and business impact.</p>
+
+  <div class="card">
+    <div class="grid2" style="gap:18px">
+      <div><label for="bud" class="small"><b>Fixes the team can ship this sprint: <span id="budV"></span></b></label>
+        <input type="range" id="bud" min="3" max="40" value="10"></div>
+      <div><span class="small"><b>Risk-based model uses:</b></span>
+        <div class="row" style="gap:4px 14px">
+          <label class="toggle"><input type="checkbox" id="o_epss" checked>Exploit probability (EPSS-style)</label>
+          <label class="toggle"><input type="checkbox" id="o_kev" checked>Known-exploited list (KEV-style)</label>
+          <label class="toggle"><input type="checkbox" id="o_exposure" checked>Internet exposure</label>
+          <label class="toggle"><input type="checkbox" id="o_criticality" checked>Asset criticality</label>
+        </div></div>
+    </div>
+    <div class="cmp" style="margin-top:14px">
+      <div><div class="small muted">Sort by CVSS score</div><div class="big" id="cR">–</div><div class="small">of total risk removed</div>
+        <p class="small" style="margin:8px 0 0"><span id="cK"></span> known-exploited fixed · <span id="cH"></span> engineering hours</p></div>
+      <div style="border-color:var(--accent)"><div class="small muted">Risk-based ranking</div><div class="big" style="color:var(--accent)" id="rR">–</div><div class="small">of total risk removed</div>
+        <p class="small" style="margin:8px 0 0"><span id="rK"></span> known-exploited fixed · <span id="rH"></span> engineering hours</p></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Risk removed as fixes ship</h2>
+    <canvas id="curve" width="900" height="260" aria-label="Cumulative risk removed"></canvas>
+    <div class="legend"><span><i style="background:var(--muted)"></i>CVSS order</span><span><i style="background:var(--accent)"></i>Risk-based order</span><span>┆ your sprint budget</span></div>
+    <p class="small muted" id="eighty"></p>
+  </div>
+
+  <div class="card">
+    <h2>Risk-based fix list <span class="muted small">(highlighted = fits this sprint)</span></h2>
+    <div class="table-scroll"><table>
+      <thead><tr><th>#</th><th>Finding</th><th>Asset</th><th>CVSS</th><th>Exploit prob.</th><th>Risk</th><th>CVSS rank</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table></div>
+  </div>
+
+  <div class="card note"><b>What this shows a client:</b> CVSS measures how bad a flaw <i>could</i> be, not how likely it is to be used against <i>you</i>.
+    Adding exploit likelihood, known-exploitation data and business context lets a small team remove most of the real risk with a fraction of the work.
+    Risk here is measured with the same likelihood × impact model, so read this as "how differently the two orders spend your effort". Turn the model inputs off to see which ones matter most.</div>
+
+  <footer>Synthetic findings and scores. EPSS (FIRST) and CISA KEV are the real-world data sources this model is designed for.
+    Built by <a href="../">Zitao Wang</a> · <a href="mailto:zaidev92@gmail.com">zaidev92@gmail.com</a></footer>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+let F = [];
+function likelihood(f, o = { epss: true, kev: true, exposure: true }) {
+  let p = o.epss ? f.epss : 0.1;
+  if (o.kev && f.kev) p = Math.max(p, 0.9);
+  if (o.exposure) p = Math.min(1, p * (f.internet_facing ? 1.5 : 0.7));
+  return p;
+}
+const impact = (f, crit = true) => f.cvss / 10 * (crit ? f.criticality / 5 : 1);
+const trueRisk = f => likelihood(f) * impact(f);
+const cmpId = (a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
+const opts = () => ({ epss: $("o_epss").checked, kev: $("o_kev").checked, exposure: $("o_exposure").checked, criticality: $("o_criticality").checked });
+const rankCvss = () => [...F].sort((a, b) => b.cvss - a.cvss || cmpId(a, b));
+const rankRisk = o => [...F].sort((a, b) => likelihood(b, o) * impact(b, o.criticality) - likelihood(a, o) * impact(a, o.criticality) || cmpId(a, b));
+function cumulative(order) { const total = F.reduce((s, f) => s + trueRisk(f), 0); let acc = 0; return [0, ...order.map(f => (acc += trueRisk(f)) / total)]; }
+function outcome(order, k) { const fixed = order.slice(0, k), total = F.reduce((s, f) => s + trueRisk(f), 0);
+  return { risk: fixed.reduce((s, f) => s + trueRisk(f), 0) / total, kev: fixed.filter(f => f.kev).length, hours: fixed.reduce((s, f) => s + f.fix_hours, 0) }; }
+
+function draw(cc, cr, k) {
+  const c = $("curve"), x = c.getContext("2d"), W = c.width, H = c.height, L = 46, B = 28, T = 10, R = 10, n = F.length;
+  const px = i => L + (W - L - R) * i / n, py = v => T + (H - T - B) * (1 - v);
+  x.clearRect(0, 0, W, H); x.font = "13px Inter, sans-serif"; x.fillStyle = css("--muted"); x.strokeStyle = css("--line"); x.lineWidth = 1;
+  [0, 0.5, 0.8, 1].forEach(v => { x.beginPath(); x.moveTo(L, py(v)); x.lineTo(W - R, py(v)); x.stroke(); x.textAlign = "right"; x.fillText(Math.round(v * 100) + "%", L - 6, py(v) + 4); });
+  x.textAlign = "center"; [0, 10, 20, 30, 40, 50, 60].forEach(i => x.fillText(i, px(i), H - 8));
+  x.setLineDash([5, 5]); x.strokeStyle = css("--text"); x.beginPath(); x.moveTo(px(k), T); x.lineTo(px(k), H - B); x.stroke(); x.setLineDash([]);
+  [[cc, css("--muted")], [cr, css("--accent")]].forEach(([arr, col]) => { x.strokeStyle = col; x.lineWidth = 3; x.beginPath(); arr.forEach((v, i) => x[i ? "lineTo" : "moveTo"](px(i), py(v))); x.stroke(); });
+  x.lineWidth = 1;
+}
+function render() {
+  const k = +$("bud").value, o = opts(); $("budV").textContent = k;
+  const oc = rankCvss(), or = rankRisk(o), a = outcome(oc, k), b = outcome(or, k), kevTotal = F.filter(f => f.kev).length;
+  $("cR").textContent = Math.round(a.risk * 100) + "%"; $("cK").textContent = `${a.kev}/${kevTotal}`; $("cH").textContent = a.hours;
+  $("rR").textContent = Math.round(b.risk * 100) + "%"; $("rK").textContent = `${b.kev}/${kevTotal}`; $("rH").textContent = b.hours;
+  const cc = cumulative(oc), cr = cumulative(or); draw(cc, cr, k);
+  const k80 = arr => arr.findIndex(v => v >= 0.8);
+  $("eighty").textContent = `To remove 80% of risk: ${k80(cr)} fixes with risk-based ranking vs. ${k80(cc)} sorting by CVSS.`;
+  const cvssRank = new Map(oc.map((f, i) => [f.id, i + 1]));
+  $("rows").innerHTML = or.slice(0, 25).map((f, i) => `<tr class="${i < k ? "fixed" : ""}"><td>${i + 1}</td>
+    <td><b>${f.id}</b> ${f.kev ? '<span class="kev">KNOWN EXPLOITED</span>' : ""}<br><span class="small muted">${esc(f.title)}</span></td>
+    <td class="small">${esc(f.asset)}<br><span class="muted">${f.internet_facing ? "internet-facing" : "internal"} · criticality ${f.criticality}/5</span></td>
+    <td class="num">${f.cvss.toFixed(1)}</td><td class="num">${Math.round(f.epss * 100)}%</td><td class="num"><b>${trueRisk(f).toFixed(2)}</b></td>
+    <td class="num ${cvssRank.get(f.id) > k && i < k ? "bad" : ""}">#${cvssRank.get(f.id)}</td></tr>`).join("");
+}
+["bud", "o_epss", "o_kev", "o_exposure", "o_criticality"].forEach(id => $(id).addEventListener("input", render));
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
+fetch("data/findings.json").then(r => r.json()).then(f => { F = f; render(); });
+</script>
+</body>
+</html>

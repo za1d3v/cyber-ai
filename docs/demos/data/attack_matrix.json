@@ -1,0 +1,53 @@
+{
+  "note": "Technique IDs/names from MITRE ATT&CK Enterprise (attack.mitre.org). Prevalence weights (1-5) are illustrative, for prioritization practice. Detection status describes a fictional client.",
+  "tactics": [
+    {"id": "TA0001", "name": "Initial Access", "techniques": [
+      {"id": "T1566", "name": "Phishing", "w": 5, "status": "partial", "source": "Email gateway", "cyberai": "02-phishing-detector", "test": "Send a benign, pre-approved simulated phishing email to a test mailbox; confirm alert + quarantine."},
+      {"id": "T1078", "name": "Valid Accounts", "w": 5, "status": "none", "source": "Identity provider logs", "cyberai": "03-log-anomaly-detection", "test": "Sign in to a test account from an unusual location/VPN exit; confirm an anomaly alert fires."},
+      {"id": "T1190", "name": "Exploit Public-Facing Application", "w": 4, "status": "partial", "source": "WAF logs", "test": "Run an authorized vulnerability scan against a staging app; confirm WAF alerts reach the SOC."},
+      {"id": "T1133", "name": "External Remote Services", "w": 3, "status": "full", "source": "VPN logs", "test": "Connect to the VPN with a test account outside business hours; confirm logging and alerting."}]},
+    {"id": "TA0002", "name": "Execution", "techniques": [
+      {"id": "T1059", "name": "Command and Scripting Interpreter", "w": 5, "status": "partial", "source": "EDR", "test": "Run a harmless encoded PowerShell 'hello world' on a test host; confirm EDR flags encoded commands."},
+      {"id": "T1204", "name": "User Execution", "w": 4, "status": "partial", "source": "EDR", "test": "Open a benign test document with macros on a lab machine; confirm the macro policy blocks it."},
+      {"id": "T1053", "name": "Scheduled Task/Job", "w": 3, "status": "none", "source": "Windows event logs", "test": "Create and delete a benign scheduled task on a test host; confirm an alert on task creation."}]},
+    {"id": "TA0003", "name": "Persistence", "techniques": [
+      {"id": "T1136", "name": "Create Account", "w": 3, "status": "none", "source": "Directory audit logs", "test": "Create a temporary test user outside the normal process; confirm an alert and ticket."},
+      {"id": "T1098", "name": "Account Manipulation", "w": 3, "status": "none", "source": "Directory audit logs", "test": "Add a test user to an admin group and remove it; confirm a privileged-group-change alert."},
+      {"id": "T1547", "name": "Boot or Logon Autostart Execution", "w": 3, "status": "full", "source": "EDR", "test": "Add a benign run-key entry on a lab host; confirm EDR detects the autostart change."}]},
+    {"id": "TA0004", "name": "Privilege Escalation", "techniques": [
+      {"id": "T1068", "name": "Exploitation for Privilege Escalation", "w": 3, "status": "partial", "source": "EDR + patch data", "test": "Review EDR coverage on unpatched hosts from the vulnerability scan; verify alerting policy (no live exploit)."},
+      {"id": "T1548", "name": "Abuse Elevation Control Mechanism", "w": 3, "status": "none", "source": "EDR", "test": "Trigger a benign UAC elevation from a non-standard path on a lab host; confirm telemetry is captured."}]},
+    {"id": "TA0005", "name": "Defense Evasion", "techniques": [
+      {"id": "T1562", "name": "Impair Defenses", "w": 4, "status": "partial", "source": "EDR tamper alerts", "test": "Attempt to stop the EDR service on a lab host with an approved test account; confirm tamper alert."},
+      {"id": "T1070", "name": "Indicator Removal", "w": 3, "status": "none", "source": "SIEM", "test": "Clear a test host's application log; confirm a log-cleared alert."},
+      {"id": "T1027", "name": "Obfuscated Files or Information", "w": 3, "status": "partial", "source": "EDR", "test": "Drop a base64-encoded harmless text file via a script on a lab host; review EDR visibility."}]},
+    {"id": "TA0006", "name": "Credential Access", "techniques": [
+      {"id": "T1110", "name": "Brute Force", "w": 5, "status": "none", "source": "Identity provider logs", "cyberai": "03-log-anomaly-detection", "test": "Make repeated failed logins against a dedicated test account; confirm brute-force/spray alerts."},
+      {"id": "T1003", "name": "OS Credential Dumping", "w": 4, "status": "full", "source": "EDR", "test": "Use the EDR vendor's built-in safe test to simulate LSASS access; confirm block + alert."},
+      {"id": "T1555", "name": "Credentials from Password Stores", "w": 3, "status": "none", "source": "EDR", "test": "Review whether browser credential-store access by unusual processes is logged on lab hosts."},
+      {"id": "T1621", "name": "Multi-Factor Authentication Request Generation", "w": 4, "status": "none", "source": "MFA provider logs", "test": "Send several MFA pushes to a test account and deny them; confirm an MFA-fatigue alert."}]},
+    {"id": "TA0007", "name": "Discovery", "techniques": [
+      {"id": "T1087", "name": "Account Discovery", "w": 3, "status": "none", "source": "Directory logs", "test": "Run a bulk directory query from a standard test account; confirm it's visible in logs."},
+      {"id": "T1046", "name": "Network Service Discovery", "w": 3, "status": "partial", "source": "Network IDS", "test": "Run an authorized port scan from a lab subnet; confirm the IDS alerts."},
+      {"id": "T1018", "name": "Remote System Discovery", "w": 2, "status": "none", "source": "EDR", "test": "Run a ping sweep from a lab host; confirm telemetry."}]},
+    {"id": "TA0008", "name": "Lateral Movement", "techniques": [
+      {"id": "T1021", "name": "Remote Services", "w": 4, "status": "partial", "source": "EDR + auth logs", "test": "RDP between two lab hosts with a test account that normally doesn't; confirm an anomaly alert."},
+      {"id": "T1550", "name": "Use Alternate Authentication Material", "w": 3, "status": "none", "source": "Auth logs", "test": "Review detection logic for token/ticket reuse with the identity team; table-top first."}]},
+    {"id": "TA0009", "name": "Collection", "techniques": [
+      {"id": "T1114", "name": "Email Collection", "w": 3, "status": "none", "source": "Mail audit logs", "test": "Create an auto-forward rule to an external test address in a test mailbox; confirm an alert."},
+      {"id": "T1560", "name": "Archive Collected Data", "w": 3, "status": "none", "source": "EDR", "test": "Compress a folder of dummy files with a password on a lab host; confirm telemetry."},
+      {"id": "T1005", "name": "Data from Local System", "w": 2, "status": "partial", "source": "DLP", "test": "Copy a file tagged with a DLP canary label; confirm DLP alert."}]},
+    {"id": "TA0011", "name": "Command and Control", "techniques": [
+      {"id": "T1071", "name": "Application Layer Protocol", "w": 5, "status": "partial", "source": "Proxy / DNS logs", "test": "Generate beacon-like HTTPS requests from a lab host to an approved test domain; confirm beacon detection."},
+      {"id": "T1105", "name": "Ingress Tool Transfer", "w": 4, "status": "partial", "source": "Proxy + EDR", "test": "Download a benign test binary via a command-line tool on a lab host; confirm alert."},
+      {"id": "T1572", "name": "Protocol Tunneling", "w": 2, "status": "none", "source": "DNS logs", "test": "Review DNS analytics for unusually long/high-volume queries; validate with a vendor test feed."}]},
+    {"id": "TA0010", "name": "Exfiltration", "techniques": [
+      {"id": "T1567", "name": "Exfiltration Over Web Service", "w": 4, "status": "none", "source": "Proxy / CASB", "cyberai": "03-log-anomaly-detection", "test": "Upload a large dummy file to an unsanctioned cloud-storage test account; confirm volume alert."},
+      {"id": "T1041", "name": "Exfiltration Over C2 Channel", "w": 3, "status": "none", "source": "Proxy / NetFlow", "test": "Send steady outbound traffic from a lab host to an approved test server; confirm anomaly detection."},
+      {"id": "T1048", "name": "Exfiltration Over Alternative Protocol", "w": 2, "status": "none", "source": "Firewall", "test": "Attempt outbound traffic on a non-standard port from a lab host; confirm firewall alert."}]},
+    {"id": "TA0040", "name": "Impact", "techniques": [
+      {"id": "T1486", "name": "Data Encrypted for Impact", "w": 5, "status": "partial", "source": "EDR ransomware module", "test": "Run the EDR vendor's ransomware simulation on a lab host; confirm block + isolation."},
+      {"id": "T1490", "name": "Inhibit System Recovery", "w": 4, "status": "none", "source": "EDR", "test": "Attempt to list (not delete) shadow copies with an admin test account; confirm alerting on vssadmin usage."},
+      {"id": "T1489", "name": "Service Stop", "w": 3, "status": "none", "source": "Windows event logs", "test": "Stop a non-critical service on a lab host; confirm an alert for service-stop bursts."}]}
+  ]
+}

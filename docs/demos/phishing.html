@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phishing Detector — Live Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="demo.css">
+<style>
+  .layout { display: grid; gap: 18px; grid-template-columns: 340px 1fr; }
+  @media (max-width: 800px) { .layout { grid-template-columns: 1fr; } }
+  .inbox { max-height: 560px; overflow-y: auto; border: 1px solid var(--line); border-radius: 10px; }
+  .mail { padding: 10px 12px; border-bottom: 1px solid var(--line); cursor: pointer; font-size: 14px; display: grid; grid-template-columns: 1fr auto; gap: 8px; background: var(--surface); }
+  .mail:hover, .mail.sel { background: var(--accent-soft); }
+  .mail > div, .layout > * { min-width: 0; }
+  .mail .from { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .mail .subj { color: var(--muted); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .risk { font-weight: 700; font-size: 13px; padding: 2px 8px; border-radius: 999px; align-self: start; }
+  .r-high { background: #fde2df; color: #b42318; } .r-mid { background: #fdf0d5; color: #8a5a00; } .r-low { background: #dcf3e5; color: #1e7b45; }
+  @media (prefers-color-scheme: dark) { .r-high { background: #4a1f1b; color: #ff9b8f; } .r-mid { background: #44370f; color: #f2c14e; } .r-low { background: #163a26; color: #6fd99a; } }
+  .hdr { font-size: 14px; display: grid; grid-template-columns: 80px 1fr; gap: 4px 10px; margin-bottom: 12px; word-break: break-all; }
+  .hdr dt { color: var(--muted); } .hdr dd { margin: 0; }
+  .body { background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 12px; font-size: 15px; }
+  .reason { display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+  .meter { height: 12px; background: var(--line); border-radius: 6px; overflow: hidden; margin: 6px 0 4px; }
+  .meter div { height: 100%; }
+  .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 10px; }
+  .metrics div { border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; } .metrics b { font-size: 22px; display: block; }
+  .metrics span { font-size: 12px; color: var(--muted); }
+  .form { display: grid; gap: 8px; grid-template-columns: 1fr 1fr; }
+  .form textarea { grid-column: 1 / -1; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: 9px; padding: 9px 12px; min-height: 70px; }
+  .form input { padding: 8px 10px; }
+  @media (max-width: 560px) { .form { grid-template-columns: 1fr; } }
+  input[type=range] { width: 100%; accent-color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><a class="brand" href="../">← Zitao Wang · Cyber-AI</a>
+    <a href="https://github.com/za1d3v/Cyber-AI/tree/main/projects/02-phishing-detector">View the code</a></nav>
+
+  <span class="eyebrow">Live demo · Blue team</span>
+  <h1>Explainable Phishing Detector</h1>
+  <p class="lede">Every email gets a risk score and the reasons behind it, so analysts can triage fast and employees learn what to look for.
+    Below: 60 held-out test emails the model has never seen.</p>
+
+  <div class="card">
+    <div class="row" style="justify-content:space-between;align-items:flex-end">
+      <div style="flex:1;min-width:240px"><label for="thr" class="small"><b>Alert threshold: <span id="thrV"></span></b> <span class="muted">· lower catches more phish but raises false alarms</span></label>
+        <input type="range" id="thr" min="0.1" max="0.9" step="0.05" value="0.5"></div>
+    </div>
+    <div class="metrics" style="margin-top:12px">
+      <div><b id="mAcc">–</b><span>Accuracy</span></div><div><b id="mP">–</b><span>Precision (alerts that are real)</span></div>
+      <div><b id="mR">–</b><span>Recall (phish caught)</span></div><div><b id="mFN">–</b><span>Phish missed</span></div><div><b id="mFP">–</b><span>False alarms</span></div>
+    </div>
+  </div>
+
+  <div class="layout">
+    <div><div class="inbox" id="inbox"></div></div>
+    <div class="card" id="detail"><p class="muted">Select an email.</p></div>
+  </div>
+
+  <div class="card">
+    <h2>Check a suspicious email</h2>
+    <div class="form">
+      <input type="text" id="fName" placeholder="Display name (e.g. Northbank Security)">
+      <input type="text" id="fAddr" placeholder="From address (e.g. alerts@northbank-verify.top)">
+      <input type="text" id="fReply" placeholder="Reply-To (optional)">
+      <input type="text" id="fSubj" placeholder="Subject">
+      <input type="text" id="fLinkText" placeholder="Link text (e.g. www.northbank.com/login)">
+      <input type="text" id="fLinkHref" placeholder="Link actually points to (e.g. https://nothbank.click/x)">
+      <input type="text" id="fAtt" placeholder="Attachment filename (optional)">
+      <span></span>
+      <textarea id="fBody" placeholder="Email body"></textarea>
+    </div>
+    <div class="row" style="margin-top:10px"><button class="primary" id="check" type="button">Analyze</button><button id="sample" type="button">Fill with an example</button></div>
+    <div id="custom" style="margin-top:14px"></div>
+  </div>
+
+  <div class="card note"><b>What this shows a client:</b> explainable signals catch most phishing, but the misses are
+    <b>business email compromise</b>: payment-change requests sent from a real, hacked vendor mailbox. They carry no technical red flags,
+    so the fix is a <i>process</i> control: always phone-verify bank detail changes. Good security consulting pairs models with process.</div>
+
+  <footer>Synthetic emails, fictional organizations. Built by <a href="../">Zitao Wang</a> · <a href="mailto:zaidev92@gmail.com">zaidev92@gmail.com</a></footer>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+let M, C, sel = 0;
+
+const host = s => { try { return new URL(s.includes("://") ? s : "http://" + s).hostname.toLowerCase(); } catch { return s.toLowerCase(); } };
+const domain = a => a.includes("@") ? a.split("@").pop().toLowerCase() : host(a);
+function lev(a, b) { let prev = [...Array(b.length + 1).keys()];
+  for (let i = 1; i <= a.length; i++) { const cur = [i]; for (let j = 1; j <= b.length; j++) cur.push(Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] !== b[j - 1]))); prev = cur; }
+  return prev[b.length]; }
+function lookalike(d) {
+  if (Object.values(C.brands).includes(d) || d === C.company || d.endsWith("." + C.company)) return false;
+  const base = d.split(".")[0].replace(/-/g, "");
+  return [...Object.keys(C.brands), C.company.split(".")[0]].some(b => base.includes(b) || lev(base, b) <= 2 || base.replace(/0/g, "o").replace(/1/g, "l") === b);
+}
+function features(e) {
+  const text = (e.subject + " " + e.body).toLowerCase(), sender = domain(e.from_addr), links = e.links || [], hrefs = links.map(l => domain(l.href));
+  const name = e.from_name.toLowerCase().replace(/ /g, ""), claimed = Object.keys(C.brands).filter(b => name.includes(b));
+  const re = s => new RegExp(s, "i");
+  return {
+    lookalike_sender: +lookalike(sender),
+    display_name_mismatch: +(claimed.length > 0 && sender !== C.brands[claimed[0]]),
+    reply_to_mismatch: +(!!e.reply_to && domain(e.reply_to) !== sender),
+    urgency: Math.min((text.match(new RegExp(C.urgency, "gi")) || []).length, 3),
+    credential_request: +re(C.creds).test(text),
+    link_text_mismatch: +links.some(l => l.text.includes(".") && host(l.text.split("/")[0].replace(/^https?:\/\//, "")) !== domain(l.href)),
+    suspicious_link_domain: +hrefs.some(h => C.suspicious_tlds.some(t => h.endsWith(t)) || lookalike(h)),
+    shortened_or_ip_link: +hrefs.some(h => C.shorteners.includes(h) || /^[\d.]+$/.test(h)),
+    risky_attachment: +(e.attachments || []).some(a => C.risky_ext.some(x => a.toLowerCase().endsWith(x))),
+    money_request: +re(C.money).test(text),
+    generic_greeting: +new RegExp(C.generic, "i").test(e.body.trim().toLowerCase()),
+  };
+}
+function score(e) {
+  const f = features(e); let z = M.bias;
+  M.features.forEach((k, i) => z += M.weights[i] * f[k]);
+  const reasons = M.features.map((k, i) => [M.explain[k], M.weights[i] * f[k], f[k]]).filter(r => r[2] > 0).sort((a, b) => b[1] - a[1]);
+  return { p: 1 / (1 + Math.exp(-z)), reasons };
+}
+const badge = p => p >= 0.7 ? `<span class="risk r-high">${Math.round(p * 100)}%</span>` : p >= 0.4 ? `<span class="risk r-mid">${Math.round(p * 100)}%</span>` : `<span class="risk r-low">${Math.round(p * 100)}%</span>`;
+const color = p => p >= 0.7 ? "#d0442f" : p >= 0.4 ? "#e0a800" : "#2a9d55";
+
+function renderResult(e, s, showLabel) {
+  const thr = +$("thr").value, flagged = s.p >= thr;
+  return `<div class="meter"><div style="width:${s.p * 100}%;background:${color(s.p)}"></div></div>
+    <p style="margin:4px 0 12px"><b>${Math.round(s.p * 100)}% phishing risk</b> → ${flagged ? '<span class="bad">Flagged</span>' : '<span class="good">Delivered</span>'}
+    ${showLabel ? ` · actually <b>${e.label ? "phishing" : "legitimate"}</b> ${(flagged === !!e.label) ? '<span class="good">✓</span>' : '<span class="bad">✕ model wrong</span>'}` : ""}</p>
+    ${s.reasons.length ? "<b class='small'>Why</b>" + s.reasons.map(r => `<div class="reason"><span>${esc(r[0])}</span><span class="muted">${r[1] >= 0 ? "+" : ""}${r[1].toFixed(2)}</span></div>`).join("") : "<p class='small muted'>No warning signals found.</p>"}`;
+}
+function showDetail(i) {
+  sel = i; const e = M.test[i], s = score(e);
+  document.querySelectorAll(".mail").forEach((m, j) => m.classList.toggle("sel", j === i));
+  $("detail").innerHTML = `<dl class="hdr"><dt>From</dt><dd>${esc(e.from_name)} &lt;${esc(e.from_addr)}&gt;</dd>${e.reply_to ? `<dt>Reply-To</dt><dd>${esc(e.reply_to)}</dd>` : ""}
+    <dt>Subject</dt><dd><b>${esc(e.subject)}</b></dd>${(e.links || []).map(l => `<dt>Link</dt><dd>“${esc(l.text)}” → ${esc(l.href)}</dd>`).join("")}
+    ${(e.attachments || []).length ? `<dt>Attached</dt><dd>${e.attachments.map(esc).join(", ")}</dd>` : ""}</dl>
+    <div class="body">${esc(e.body)}</div><div style="margin-top:14px">${renderResult(e, s, true)}</div>`;
+}
+function renderAll() {
+  const thr = +$("thr").value; $("thrV").textContent = Math.round(thr * 100) + "%";
+  let tp = 0, fp = 0, fn = 0, tn = 0;
+  $("inbox").innerHTML = M.test.map((e, i) => { const s = score(e), f = s.p >= thr;
+    tp += f && e.label; fp += f && !e.label; fn += !f && e.label; tn += !f && !e.label;
+    return `<div class="mail" data-i="${i}"><div><div class="from">${esc(e.from_name)} · ${esc(e.from_addr)}</div><div class="subj">${esc(e.subject)}</div></div>${badge(s.p)}</div>`; }).join("");
+  $("mAcc").textContent = Math.round((tp + tn) / M.test.length * 100) + "%";
+  $("mP").textContent = Math.round(tp / Math.max(tp + fp, 1) * 100) + "%";
+  $("mR").textContent = Math.round(tp / Math.max(tp + fn, 1) * 100) + "%";
+  $("mFN").textContent = fn; $("mFP").textContent = fp;
+  showDetail(sel);
+}
+$("inbox").addEventListener("click", e => { const m = e.target.closest(".mail"); if (m) showDetail(+m.dataset.i); });
+$("thr").addEventListener("input", renderAll);
+$("sample").onclick = () => {
+  Object.entries({ fName: "Northbank Security", fAddr: "alerts@n0rthbank.top", fReply: "help@support-desk.info", fSubj: "Unusual sign-in detected",
+    fLinkText: "www.northbank.com/secure", fLinkHref: "https://n0rthbank.top/auth", fAtt: "",
+    fBody: "Dear customer, we detected unusual activity. Verify your account within 24 hours or it will be locked." }).forEach(([k, v]) => $(k).value = v);
+  $("check").click();
+};
+$("check").onclick = () => {
+  const e = { from_name: $("fName").value, from_addr: $("fAddr").value || "unknown@unknown", reply_to: $("fReply").value, subject: $("fSubj").value, body: $("fBody").value,
+    links: $("fLinkHref").value ? [{ text: $("fLinkText").value || "link", href: $("fLinkHref").value }] : [], attachments: $("fAtt").value ? [$("fAtt").value] : [] };
+  $("custom").innerHTML = renderResult(e, score(e), false);
+};
+fetch("data/phishing_model.json").then(r => r.json()).then(m => { M = m; C = m.config; renderAll(); });
+</script>
+</body>
+</html>

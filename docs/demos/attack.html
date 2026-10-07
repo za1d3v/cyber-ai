@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATT&amp;CK Coverage Map — Live Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="demo.css">
+<style>
+  .matrix { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px 8px; }
+  .col h3 { font-size: 12px; margin: 0 0 6px; min-height: 32px; line-height: 1.25; }
+  .col .pct { font-size: 11px; color: var(--muted); font-weight: 500; display: block; }
+  .cell { display: block; width: 100%; text-align: left; font-size: 11.5px; line-height: 1.25; padding: 7px 7px; border-radius: 7px; margin-bottom: 5px;
+          border: 1px solid transparent; cursor: pointer; font-weight: 500; }
+  .cell b { display: block; font-size: 10.5px; opacity: .8; }
+  .c-none { background: #fde2df; color: #8c1d13; } .c-partial { background: #fdf0d5; color: #7a4f00; } .c-full { background: #d6f0e0; color: #17633a; }
+  @media (prefers-color-scheme: dark) { .c-none { background: #4a1f1b; color: #ffb4aa; } .c-partial { background: #44370f; color: #f5d27a; } .c-full { background: #163a26; color: #8fe0ad; } }
+  .cell.boost { outline: 2px dashed var(--accent); outline-offset: -2px; }
+  .w { letter-spacing: 1px; }
+  .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+  .metrics div { border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; } .metrics b { font-size: 24px; display: block; } .metrics span { font-size: 12px; color: var(--muted); }
+  .legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 13px; color: var(--muted); margin: 10px 0; }
+  .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+  .gap { display: grid; grid-template-columns: 34px 1fr; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+  .gap .n { font-weight: 700; color: var(--accent); }
+  #detail { min-height: 80px; }
+</style>
+</head>
+<body>
+<div class="wrap" style="max-width:1200px">
+  <nav><a class="brand" href="../">← Zitao Wang · Cyber-AI</a>
+    <a href="https://github.com/za1d3v/Cyber-AI/tree/main/projects/05-attack-coverage-map">View the code</a></nav>
+
+  <span class="eyebrow">Live demo · Purple team</span>
+  <h1>MITRE ATT&amp;CK Coverage Map</h1>
+  <p class="lede">Which attacker techniques would a company actually detect? Map current detections onto MITRE ATT&amp;CK, weight gaps by how common
+    each technique is, and turn the result into a prioritized purple-team test plan. Click any technique to change its status.</p>
+
+  <div class="card">
+    <div class="metrics">
+      <div><b id="mPlain">–</b><span>Techniques covered</span></div>
+      <div><b id="mW">–</b><span>Prevalence-weighted coverage</span></div>
+      <div><b id="mNone">–</b><span>Techniques with no detection</span></div>
+    </div>
+    <div class="row" style="margin-top:12px">
+      <label class="toggle"><input type="checkbox" id="boost"><span><b>Deploy Cyber-AI detections</b> <span class="muted">(phishing detector + login anomaly detection from this portfolio)</span></span></label>
+    </div>
+    <div class="legend"><span><i class="c-none"></i>No detection</span><span><i class="c-partial"></i>Partial</span><span><i class="c-full"></i>Detected &amp; tested</span><span>●●●●● = how common in real attacks (illustrative)</span></div>
+    <div class="matrix" id="matrix"></div>
+    <div class="row" style="margin-top:8px"><button id="reset" type="button">Reset to client baseline</button></div>
+  </div>
+
+  <div class="grid2">
+    <div class="card"><h2>Technique details</h2><div id="detail" class="small muted">Hover or click a technique.</div></div>
+    <div class="card">
+      <h2>Top gaps → purple-team plan</h2>
+      <p class="small muted" style="margin-top:-6px">Ranked by prevalence × missing coverage.</p>
+      <div id="gaps"></div>
+      <div class="row" style="margin-top:12px"><button class="primary" id="dl" type="button">Download test plan (.md)</button></div>
+    </div>
+  </div>
+
+  <div class="card note"><b>What this shows a client:</b> most companies have strong coverage where vendors sell it (endpoint malware) and big blind
+    spots in identity and data exfiltration, which is where today's breaches happen. A coverage map turns "are we secure?" into a ranked, testable work list.
+    Every test in the plan is a safe, pre-approved emulation run with the SOC informed.</div>
+
+  <footer>Technique IDs from <a href="https://attack.mitre.org/">MITRE ATT&amp;CK®</a> Enterprise; prevalence weights illustrative; client data fictional.
+    Built by <a href="../">Zitao Wang</a> · <a href="mailto:zaidev92@gmail.com">zaidev92@gmail.com</a></footer>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const CREDIT = { none: 0, partial: 0.5, full: 1 }, NEXT = { none: "partial", partial: "full", full: "none" };
+const LABEL = { none: "No detection", partial: "Partial", full: "Detected & tested" };
+let BASE, state = {};
+
+function effective(t) {
+  let s = state[t.id];
+  if ($("boost").checked && t.cyberai && s !== "full") s = s === "none" ? "partial" : "full";
+  return s;
+}
+function all() { return BASE.tactics.flatMap(tac => tac.techniques.map(t => ({ ...t, tactic: tac.name, eff: effective(t) }))); }
+function render() {
+  const rows = all();
+  const plain = rows.reduce((a, t) => a + CREDIT[t.eff], 0) / rows.length;
+  const w = rows.reduce((a, t) => a + t.w * CREDIT[t.eff], 0) / rows.reduce((a, t) => a + t.w, 0);
+  $("mPlain").textContent = Math.round(plain * 100) + "%"; $("mW").textContent = Math.round(w * 100) + "%";
+  $("mNone").textContent = `${rows.filter(t => t.eff === "none").length} / ${rows.length}`;
+  $("matrix").innerHTML = BASE.tactics.map(tac => {
+    const ts = tac.techniques, pct = ts.reduce((a, t) => a + CREDIT[effective(t)], 0) / ts.length;
+    return `<div class="col"><h3>${esc(tac.name)}<span class="pct">${Math.round(pct * 100)}% covered</span></h3>` +
+      ts.map(t => { const e = effective(t), boosted = e !== state[t.id];
+        return `<button type="button" class="cell c-${e}${boosted ? " boost" : ""}" data-id="${t.id}" title="${esc(t.name)}: ${LABEL[e]}"><b>${t.id} <span class="w">${"●".repeat(t.w)}</span></b>${esc(t.name)}</button>`; }).join("") + "</div>";
+  }).join("");
+  const gaps = rows.map(t => ({ ...t, gap: t.w * (1 - CREDIT[t.eff]) })).filter(g => g.gap > 0).sort((a, b) => b.gap - a.gap || (a.id < b.id ? -1 : 1)).slice(0, 8);
+  $("gaps").innerHTML = gaps.map((g, i) => `<div class="gap"><span class="n">${i + 1}</span><div><b>${g.id} ${esc(g.name)}</b> <span class="muted small">· ${esc(g.tactic)} · ${LABEL[g.eff].toLowerCase()}</span><br>
+    <span class="small">${esc(g.test)}</span></div></div>`).join("") || "<p class='small'>No gaps. Time to test what you have!</p>";
+  window._gaps = gaps;
+}
+function showDetail(id) {
+  const t = all().find(x => x.id === id);
+  $("detail").innerHTML = `<p style="margin:0 0 6px;color:var(--text)"><b><a href="https://attack.mitre.org/techniques/${t.id}/">${t.id}</a> ${esc(t.name)}</b> · ${esc(t.tactic)}</p>
+    <p style="margin:0 0 4px">Status: <b style="color:var(--text)">${LABEL[t.eff]}</b> · Data source: ${esc(t.source)} · Prevalence ${"●".repeat(t.w)}</p>
+    ${t.cyberai ? `<p style="margin:0 0 4px">Covered by Cyber-AI project <code>${t.cyberai}</code></p>` : ""}
+    <p style="margin:0"><b style="color:var(--text)">Safe test:</b> ${esc(t.test)}</p>`;
+}
+$("matrix").addEventListener("click", e => { const c = e.target.closest(".cell"); if (!c) return; state[c.dataset.id] = NEXT[state[c.dataset.id]]; render(); showDetail(c.dataset.id); });
+$("matrix").addEventListener("mouseover", e => { const c = e.target.closest(".cell"); if (c) showDetail(c.dataset.id); });
+$("boost").addEventListener("change", render);
+$("reset").onclick = () => { BASE.tactics.forEach(tac => tac.techniques.forEach(t => state[t.id] = t.status)); $("boost").checked = false; render(); };
+$("dl").onclick = () => {
+  const md = ["# Purple-team test plan", "", "Safe, pre-approved emulations to validate (or build) detections, in priority order.",
+    "Run only in authorized environments, with test accounts and lab hosts, and with the SOC informed.", "",
+    "| # | Technique | Tactic | Current | Test | Pass criteria |", "|---|---|---|---|---|---|",
+    ...window._gaps.map((g, i) => `| ${i + 1} | ${g.id} ${g.name} | ${g.tactic} | ${g.eff} | ${g.test} | Alert in SIEM within 15 min, triaged by on-call |`)].join("\n");
+  const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([md], { type: "text/markdown" })); a.download = "purple_team_plan.md"; a.click();
+};
+fetch("data/attack_matrix.json").then(r => r.json()).then(m => { BASE = m; $("reset").click(); });
+</script>
+</body>
+</html>

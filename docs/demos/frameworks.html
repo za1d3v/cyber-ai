@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Framework Map — Cyber-AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="demo.css">
+<style>
+  .grid-tbl th, .grid-tbl td { text-align: center; } .grid-tbl th:first-child, .grid-tbl td:first-child { text-align: left; }
+  .dot { display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); }
+  .dot.half { background: linear-gradient(90deg, var(--accent) 50%, var(--line) 50%); }
+  .pill { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--accent-soft); color: var(--accent); margin: 2px 2px 2px 0; font-weight: 500; white-space: nowrap; }
+  td { font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap" style="max-width:1100px">
+  <nav><a class="brand" href="../">← Zitao Wang · Cyber-AI</a><a href="https://github.com/za1d3v/Cyber-AI">View the code</a></nav>
+  <span class="eyebrow">Reference</span>
+  <h1>Framework map</h1>
+  <p class="lede">How each demo maps to the industry frameworks clients and auditors ask about. Every engagement report uses the same mapping, so findings drop
+    straight into existing risk registers.</p>
+
+  <div class="card">
+    <h2>Demos × frameworks</h2>
+    <div class="table-scroll"><table>
+      <thead><tr><th>Demo</th><th>OWASP LLM Top 10 (2025)</th><th>MITRE ATLAS</th><th>MITRE ATT&amp;CK</th><th>NIST CSF 2.0</th></tr></thead>
+      <tbody>
+        <tr><td><a href="redteam.html"><b>01 LLM Red-Team Harness</b></a></td>
+          <td><span class="pill">LLM01</span><span class="pill">LLM02</span><span class="pill">LLM05</span><span class="pill">LLM06</span><span class="pill">LLM07</span><span class="pill">LLM10</span></td>
+          <td><span class="pill">AML.T0051 LLM Prompt Injection</span><span class="pill">AML.T0056 Extract LLM System Prompt</span><span class="pill">AML.T0057 LLM Data Leakage</span></td>
+          <td class="muted">—</td><td><span class="pill">Identify</span><span class="pill">Protect</span></td></tr>
+        <tr><td><a href="phishing.html"><b>02 Phishing Detector</b></a></td><td class="muted">—</td><td class="muted">—</td>
+          <td><span class="pill">T1566 Phishing</span></td><td><span class="pill">Detect</span><span class="pill">Respond</span></td></tr>
+        <tr><td><a href="logs.html"><b>03 Login Anomaly Detection</b></a></td><td class="muted">—</td><td class="muted">—</td>
+          <td><span class="pill">T1110.001</span><span class="pill">T1110.003</span><span class="pill">T1078</span><span class="pill">T1567</span></td><td><span class="pill">Detect</span></td></tr>
+        <tr><td><a href="advml.html"><b>04 Adversarial ML Lab</b></a></td><td><span class="pill">LLM04</span></td>
+          <td><span class="pill">AML.T0015 Evade AI Model</span><span class="pill">AML.T0020 Poison Training Data</span></td>
+          <td class="muted">—</td><td><span class="pill">Identify</span><span class="pill">Protect</span></td></tr>
+        <tr><td><a href="attack.html"><b>05 ATT&amp;CK Coverage Map</b></a></td><td class="muted">—</td><td class="muted">—</td>
+          <td><span class="pill">36 techniques, 12 tactics</span></td><td><span class="pill">Identify</span><span class="pill">Detect</span></td></tr>
+        <tr><td><a href="vulns.html"><b>06 Vuln Prioritizer</b></a></td><td class="muted">—</td><td class="muted">—</td>
+          <td><span class="pill">T1190</span><span class="pill">T1133</span></td><td><span class="pill">Identify</span><span class="pill">Protect</span></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h2>OWASP Top 10 for LLM Applications: coverage</h2>
+    <p class="small muted" style="margin-top:-4px">Filled = tested directly by a demo · half = partially covered.</p>
+    <div class="table-scroll"><table class="grid-tbl">
+      <thead><tr><th>Risk</th><th>01 Red-team harness</th><th>04 Adversarial ML</th></tr></thead>
+      <tbody>
+        <tr><td>LLM01 Prompt Injection</td><td><span class="dot"></span></td><td></td></tr>
+        <tr><td>LLM02 Sensitive Information Disclosure</td><td><span class="dot"></span></td><td></td></tr>
+        <tr><td>LLM03 Supply Chain</td><td></td><td><span class="dot half"></span></td></tr>
+        <tr><td>LLM04 Data and Model Poisoning</td><td></td><td><span class="dot"></span></td></tr>
+        <tr><td>LLM05 Improper Output Handling</td><td><span class="dot"></span></td><td></td></tr>
+        <tr><td>LLM06 Excessive Agency</td><td><span class="dot"></span></td><td></td></tr>
+        <tr><td>LLM07 System Prompt Leakage</td><td><span class="dot"></span></td><td></td></tr>
+        <tr><td>LLM08 Vector and Embedding Weaknesses</td><td><span class="dot half"></span></td><td></td></tr>
+        <tr><td>LLM09 Misinformation</td><td></td><td></td></tr>
+        <tr><td>LLM10 Unbounded Consumption</td><td><span class="dot"></span></td><td></td></tr>
+      </tbody>
+    </table></div>
+    <p class="small muted">LLM08 is partly covered by the indirect-injection probe (poisoned retrieved documents). LLM03 is partly covered by the training-data
+      provenance defense. LLM09 (misinformation) is next on the roadmap: a groundedness checker for RAG answers.</p>
+  </div>
+
+  <div class="card">
+    <h2>Sources</h2>
+    <ul class="small">
+      <li><a href="https://genai.owasp.org/llm-top-10/">OWASP Top 10 for LLM Applications 2025</a></li>
+      <li><a href="https://atlas.mitre.org/">MITRE ATLAS</a>: adversarial threat landscape for AI systems</li>
+      <li><a href="https://attack.mitre.org/">MITRE ATT&amp;CK®</a> Enterprise</li>
+      <li><a href="https://www.nist.gov/cyberframework">NIST Cybersecurity Framework 2.0</a>: Govern, Identify, Protect, Detect, Respond, Recover</li>
+      <li><a href="https://www.first.org/epss/">FIRST EPSS</a> and <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV</a> (vulnerability prioritization inputs)</li>
+    </ul>
+  </div>
+
+  <footer>Built by <a href="../">Zitao Wang</a> · <a href="mailto:zaidev92@gmail.com">zaidev92@gmail.com</a></footer>
+</div>
+</body>
+</html>

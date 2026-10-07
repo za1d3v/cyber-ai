@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adversarial ML Lab — Live Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="demo.css">
+<style>
+  select, textarea { font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: 9px; padding: 9px 12px; width: 100%; }
+  textarea { min-height: 60px; }
+  .seg button.on { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
+  .step { display: grid; grid-template-columns: 26px 1fr 150px; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+  .step .n { color: var(--muted); font-weight: 700; }
+  .msg { font-family: ui-monospace, Menlo, monospace; font-size: 13px; word-break: break-word; }
+  .msg .chg { background: #fdf0d5; color: #8a5a00; border-radius: 3px; padding: 0 2px; }
+  @media (prefers-color-scheme: dark) { .msg .chg { background: #44370f; color: #f2c14e; } }
+  .bar { height: 10px; background: var(--line); border-radius: 5px; overflow: hidden; } .bar div { height: 100%; transition: width .25s; }
+  .pct { font-size: 12px; color: var(--muted); }
+  input[type=range] { width: 100%; accent-color: var(--accent); }
+  .big { font-size: 34px; font-weight: 700; }
+  canvas { width: 100%; height: auto; display: block; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><a class="brand" href="../">← Zitao Wang · Cyber-AI</a>
+    <a href="https://github.com/za1d3v/Cyber-AI/tree/main/projects/04-adversarial-ml-lab">View the code</a></nav>
+
+  <span class="eyebrow">Live demo · AI red team</span>
+  <h1>Adversarial ML Lab</h1>
+  <p class="lede">Machine-learning security filters can be fooled. Watch an attacker rewrite a scam message step by step until a spam filter
+    lets it through, then turn on defenses. Below that, see what happens when an attacker poisons the training data.</p>
+
+  <div class="card">
+    <h2>1 · Evasion attack</h2>
+    <div class="grid2" style="gap:14px">
+      <div><label class="small"><b>Scam message</b></label><select id="pick"></select>
+        <textarea id="txt" style="margin-top:8px"></textarea></div>
+      <div><label class="small"><b>Filter</b></label>
+        <div class="row seg" id="modelSeg" style="margin-top:4px"></div>
+        <p class="small muted" id="modelDesc"></p>
+        <button class="primary" id="attack" type="button">▶ Run attack</button></div>
+    </div>
+    <div id="steps" style="margin-top:14px"></div>
+  </div>
+
+  <div class="card">
+    <h2>2 · Evasion scoreboard <span class="muted small">(every held-out scam, attacker allowed ≤ 6 edits)</span></h2>
+    <div class="table-scroll"><table><thead><tr><th>Filter</th><th>Normal accuracy</th><th>Scams that get through: l33t-speak only</th><th>…: all tricks</th></tr></thead><tbody id="board"></tbody></table></div>
+    <p class="small muted">Normalization alone makes things <i>worse</i> against a full attacker: blocked from l33t-speak, the attacker shifts to synonyms and padding. That's the arms race.
+      Adversarial training (learning from attacked examples) closes these specific gaps, but new tricks would need new training.</p>
+  </div>
+
+  <div class="card">
+    <h2>3 · Data poisoning</h2>
+    <p class="small muted" style="margin-top:-4px">The attacker can tamper with training labels (e.g. through a compromised labeling vendor or a feedback button) and marks scams as "not spam".</p>
+    <label for="pois" class="small"><b>Spam training labels flipped by attacker: <span id="poisV"></span></b></label>
+    <input type="range" id="pois" min="0" max="90" step="10" value="70">
+    <div class="row" style="gap:32px;margin:12px 0">
+      <div><div class="big bad" id="pUndef">–</div><div class="small muted">scams caught, undefended</div></div>
+      <div><div class="big good" id="pDef">–</div><div class="small muted">with golden-set sanitization</div></div>
+    </div>
+    <canvas id="curve" width="900" height="230" aria-label="Poisoning curve"></canvas>
+    <p class="small muted">Defense: train a reference model on a small human-verified "golden" set (30 examples) the attacker can't reach,
+      and drop any training example it strongly disagrees with. Protecting the data pipeline matters as much as the model.</p>
+  </div>
+
+  <div class="card note"><b>What this shows a client:</b> if you deploy ML for security (spam, fraud, malware, content moderation), attackers will probe it.
+    Test it the way they will: adaptive evasion, data poisoning. Then budget for ongoing adversarial retraining and training-data provenance, not a one-time model.
+    Maps to OWASP <b>LLM04</b> (Data and Model Poisoning) and MITRE ATLAS evasion and poisoning techniques.</div>
+
+  <footer>Toy-scale, synthetic data for education. Built by <a href="../">Zitao Wang</a> · <a href="mailto:zaidev92@gmail.com">zaidev92@gmail.com</a></footer>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+let D, LEET, UNLEET, train, test, models, current = "base";
+
+function tokens(text, normalize) {
+  let t = text.toLowerCase();
+  if (normalize) { t = t.replace(/(?<=\w)[.\-_*](?=\w)/g, ""); t = [...t].map(c => UNLEET[c] || c).join(""); }
+  return t.match(/[a-z0-9$]+(?:-[a-z0-9]+)*/g) || [];
+}
+class NB {
+  constructor(normalize = false) { this.normalize = normalize; }
+  fit(rows) {
+    this.c = [new Map(), new Map()]; this.docs = [0, 0]; this.tot = [0, 0];
+    rows.forEach(r => { this.docs[r.label]++; tokens(r.text, this.normalize).forEach(w => { this.c[r.label].set(w, (this.c[r.label].get(w) || 0) + 1); this.tot[r.label]++; }); });
+    this.vocab = new Set([...this.c[0].keys(), ...this.c[1].keys()]); return this;
+  }
+  ws(w) { const V = this.vocab.size; return Math.log(((this.c[1].get(w) || 0) + 1) / (this.tot[1] + V)) - Math.log(((this.c[0].get(w) || 0) + 1) / (this.tot[0] + V)); }
+  p(text) { let z = Math.log((this.docs[1] + 1) / (this.docs[0] + 1)); tokens(text, this.normalize).forEach(w => { if (this.vocab.has(w)) z += this.ws(w); });
+    z = Math.max(Math.min(z, 50), -50); return 1 / (1 + Math.exp(-z)); }
+  acc(rows) { return rows.filter(r => (this.p(r.text) >= 0.5) === !!r.label).length / rows.length; }
+}
+const obf = (w, m) => m === "leet" ? [...w].map(c => LEET[c] || c).join("") : (D.synonyms[w] || w);
+function evade(model, text, budget = 6, modes = ["leet", "synonym", "pad"]) {
+  let words = text.split(" "); const steps = [];
+  for (let k = 0; k < budget; k++) {
+    if (model.p(words.join(" ")) < 0.5) break;
+    const cands = [];
+    words.forEach((w, i) => modes.forEach(m => { if (m === "pad") return; const nw = obf(w, m); if (nw !== w) cands.push([[...words.slice(0, i), nw, ...words.slice(i + 1)], `${w} → ${nw}`, i]); }));
+    if (modes.includes("pad")) D.pad.forEach(pw => cands.push([[...words, pw], `+ '${pw}'`, words.length]));
+    let best = null; cands.forEach(c => { const p = model.p(c[0].join(" ")); if (!best || p < best[0]) best = [p, ...c]; });
+    if (!best) break;
+    words = best[1]; steps.push({ label: best[2], idx: best[3], words: [...words], p: best[0] });
+  }
+  return { words, steps, ok: model.p(words.join(" ")) < 0.5 };
+}
+const evasionRate = (m, modes) => { const spam = test.filter(r => r.label === 1 && m.p(r.text) >= 0.5); return spam.filter(r => evade(m, r.text, 6, modes).ok).length / Math.max(spam.length, 1); };
+
+const MODELS = {
+  base: ["Baseline", "Naive Bayes trained on clean data. No defenses."],
+  norm: ["+ Normalization", "Undoes l33t-speak and punctuation tricks (v3r1fy → verify) before classifying."],
+  hard: ["+ Adversarial training", "Normalization, plus the model also trains on attacked copies of scams (synonyms, padding)."],
+};
+const barColor = p => p >= 0.5 ? "#d0442f" : "var(--good)";
+function msgHtml(words, idx) { return words.map((w, i) => i === idx ? `<span class="chg">${esc(w)}</span>` : esc(w)).join(" "); }
+
+async function runAttack() {
+  const m = models[current], text = $("txt").value.trim().toLowerCase(); if (!text) return;
+  $("attack").disabled = true;
+  const p0 = m.p(text), res = evade(m, text);
+  const row = (n, html, p, label) => `<div class="step"><span class="n">${n}</span><div><div class="msg">${html}</div>${label ? `<div class="pct">${esc(label)}</div>` : ""}</div>
+    <div><div class="bar"><div style="width:${p * 100}%;background:${barColor(p)}"></div></div><div class="pct">${Math.round(p * 100)}% spam → ${p >= 0.5 ? "blocked" : "delivered"}</div></div></div>`;
+  $("steps").innerHTML = row(0, esc(text), p0, "original");
+  if (p0 < 0.5) { $("steps").insertAdjacentHTML("beforeend", `<p class="small muted">This filter already misses the original message.</p>`); $("attack").disabled = false; return; }
+  for (let i = 0; i < res.steps.length; i++) {
+    await new Promise(r => setTimeout(r, 450));
+    const s = res.steps[i]; $("steps").insertAdjacentHTML("beforeend", row(i + 1, msgHtml(s.words, s.idx), s.p, s.label));
+  }
+  $("steps").insertAdjacentHTML("beforeend", `<p style="margin-top:12px"><b class="${res.ok ? "bad" : "good"}">${res.ok ? `⚠ Evaded in ${res.steps.length} edits: the scam reaches the inbox.` : `✓ Filter held: still blocked after ${res.steps.length} edits.`}</b></p>`);
+  $("attack").disabled = false;
+}
+
+function poisonedTrain(frac, pool) {
+  const order = pool ? D.poison_order_pool : D.poison_order, rows = pool ? train.slice(D.golden) : train;
+  const flip = new Set(order.slice(0, Math.floor(order.length * frac)));
+  return rows.map((r, i) => flip.has(i) ? { ...r, label: 0 } : r);
+}
+function sanitize(rows, golden) { const ref = new NB().fit(golden); return golden.concat(rows.filter(r => (ref.p(r.text) >= 0.5) === !!r.label)); }
+const scamCatch = m => { const s = test.filter(r => r.label === 1); return s.filter(r => m.p(r.text) >= 0.5).length / s.length; };
+let CURVE = [];
+function drawCurve() {
+  const c = $("curve"), x = c.getContext("2d"), W = c.width, H = c.height, L = 46, B = 30, T = 12, R = 12;
+  x.clearRect(0, 0, W, H); x.font = "13px Inter, sans-serif"; x.fillStyle = css("--muted"); x.strokeStyle = css("--line");
+  [0, 50, 100].forEach(v => { const y = T + (H - T - B) * (1 - v / 100); x.beginPath(); x.moveTo(L, y); x.lineTo(W - R, y); x.stroke(); x.textAlign = "right"; x.fillText(v + "%", L - 6, y + 4); });
+  x.textAlign = "center"; CURVE.forEach(([p]) => x.fillText(p + "%", L + (W - L - R) * p / 90, H - 8));
+  const cur = +$("pois").value;
+  [[1, "#d0442f"], [2, css("--good")]].forEach(([k, col]) => {
+    x.strokeStyle = col; x.lineWidth = 3; x.beginPath();
+    CURVE.forEach((r, i) => { const px = L + (W - L - R) * r[0] / 90, py = T + (H - T - B) * (1 - r[k]); x[i ? "lineTo" : "moveTo"](px, py); }); x.stroke();
+    CURVE.forEach(r => { const px = L + (W - L - R) * r[0] / 90, py = T + (H - T - B) * (1 - r[k]); x.fillStyle = col; x.beginPath(); x.arc(px, py, r[0] === cur ? 7 : 4, 0, 7); x.fill(); });
+  });
+  x.lineWidth = 1;
+}
+function updatePoison() {
+  const v = +$("pois").value; $("poisV").textContent = v + "%";
+  const r = CURVE.find(c => c[0] === v); $("pUndef").textContent = Math.round(r[1] * 100) + "%"; $("pDef").textContent = Math.round(r[2] * 100) + "%"; drawCurve();
+}
+
+fetch("data/advml.json").then(r => r.json()).then(d => {
+  D = d; LEET = d.leet; UNLEET = Object.fromEntries(Object.entries(LEET).map(([k, v]) => [v, k]));
+  train = d.rows.filter((_, i) => i % 5 !== 4); test = d.rows.filter((_, i) => i % 5 === 4);
+  models = { base: new NB().fit(train), norm: new NB(true).fit(train), hard: new NB(true).fit(train.concat(d.augment)) };
+  Object.entries(MODELS).forEach(([k, [label]]) => { const b = document.createElement("button"); b.type = "button"; b.className = "chip" + (k === current ? " on" : ""); b.textContent = label;
+    b.onclick = () => { current = k; document.querySelectorAll("#modelSeg button").forEach(x => x.classList.toggle("on", x === b)); $("modelDesc").textContent = MODELS[k][1]; $("steps").innerHTML = ""; }; $("modelSeg").appendChild(b); });
+  $("modelDesc").textContent = MODELS[current][1];
+  const scams = [...new Set(test.filter(r => r.label === 1).map(r => r.text))];
+  $("pick").innerHTML = scams.map(s => `<option>${esc(s)}</option>`).join("");
+  $("pick").onchange = () => { $("txt").value = $("pick").value; $("steps").innerHTML = ""; }; $("txt").value = scams[0];
+  $("attack").onclick = runAttack;
+  $("board").innerHTML = Object.entries(MODELS).map(([k, [label]]) => { const m = models[k];
+    return `<tr><td><b>${label}</b></td><td>${Math.round(m.acc(test) * 100)}%</td><td>${Math.round(evasionRate(m, ["leet"]) * 100)}%</td><td><b>${Math.round(evasionRate(m, ["leet", "synonym", "pad"]) * 100)}%</b></td></tr>`; }).join("");
+  const golden = train.slice(0, d.golden);
+  CURVE = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90].map(p => [p, scamCatch(new NB().fit(poisonedTrain(p / 100, false))), scamCatch(new NB().fit(sanitize(poisonedTrain(p / 100, true), golden)))]);
+  $("pois").addEventListener("input", updatePoison); updatePoison();
+});
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => CURVE.length && drawCurve());
+</script>
+</body>
+</html>

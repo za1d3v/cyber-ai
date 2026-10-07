@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login Anomaly Detection — Live Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="demo.css">
+<style>
+  canvas { display: block; width: 100%; height: auto; }
+  input[type=range] { width: 100%; accent-color: var(--accent); }
+  .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin-top: 12px; }
+  .metrics div { border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; } .metrics b { font-size: 22px; display: block; }
+  .metrics span { font-size: 12px; color: var(--muted); }
+  .sev { font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 999px; text-transform: uppercase; white-space: nowrap; }
+  .s-critical { background: #fde2df; color: #b42318; } .s-high { background: #fdf0d5; color: #8a5a00; } .s-low { background: var(--accent-soft); color: var(--accent); }
+  @media (prefers-color-scheme: dark) { .s-critical { background: #4a1f1b; color: #ff9b8f; } .s-high { background: #44370f; color: #f2c14e; } }
+  tr.alert { cursor: pointer; } tr.alert:hover, tr.alert.sel { background: var(--accent-soft); }
+  .verdict { font-size: 12px; font-weight: 600; white-space: nowrap; }
+  .legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 13px; color: var(--muted); margin-top: 8px; }
+  .legend i { display: inline-block; width: 11px; height: 11px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><a class="brand" href="../">← Zitao Wang · Cyber-AI</a>
+    <a href="https://github.com/za1d3v/Cyber-AI/tree/main/projects/03-log-anomaly-detection">View the code</a></nav>
+
+  <span class="eyebrow">Live demo · Blue team / SOC</span>
+  <h1>Login Anomaly Detection</h1>
+  <p class="lede">A week of sign-in logs for a 42-person company, with five real attacks hidden inside. Detection rules plus per-user
+    behavioral baselines surface them. Slide the sensitivity to see the tradeoff every SOC lives with: catching everything vs. drowning in alerts.</p>
+
+  <div class="card">
+    <label for="lvl" class="small"><b>Detection sensitivity: <span id="lvlV"></span></b> <span class="muted">· 1 = quiet, 5 = paranoid</span></label>
+    <input type="range" id="lvl" min="1" max="5" step="1" value="3">
+    <div class="metrics">
+      <div><b id="mInc">–</b><span>Attacks caught</span></div><div><b id="mAl">–</b><span>Alerts raised</span></div>
+      <div><b id="mFP">–</b><span>False positives</span></div><div><b id="mEv">–</b><span>Log events analyzed</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Sign-in activity (hourly, Denver time)</h2>
+    <canvas id="tl" width="1000" height="220" aria-label="Timeline of login activity"></canvas>
+    <div class="legend"><span><i style="background:var(--shelf)"></i>Successful logins</span><span><i style="background:#d0442f"></i>Failed logins</span><span>▼ alert (click one below to locate it)</span></div>
+  </div>
+
+  <div class="card">
+    <h2>Alerts</h2>
+    <div class="table-scroll"><table>
+      <thead><tr><th>Time (UTC)</th><th>Severity</th><th>Detection</th><th>Evidence</th><th>MITRE ATT&amp;CK</th><th>Ground truth</th></tr></thead>
+      <tbody id="alerts"></tbody>
+    </table></div>
+  </div>
+
+  <div class="card note"><b>What this shows a client:</b> simple, explainable detections catch credential attacks that slip past a
+    firewall. The real work is <b>tuning</b>: at sensitivity 5 analysts face several false alarms for every true one, while at 1 they'd still catch
+    every attack here. False positives are real business travel and ordinary large uploads. Context such as a travel calendar, VPN allow-list or file-sharing logs removes most of them.</div>
+
+  <footer>Synthetic logs; IPs from documentation-only ranges (RFC 5737). Built by <a href="../">Zitao Wang</a> · <a href="mailto:zaidev92@gmail.com">zaidev92@gmail.com</a></footer>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+let D, ALERTS = [], SEL = -1;
+const ts = e => Date.parse(e.t + ":00Z");
+const MIN = 60000;
+
+function km(a, b) {
+  const [, la1, lo1] = D.cities[a], [, la2, lo2] = D.cities[b], r = x => x * Math.PI / 180;
+  const h = Math.sin(r(la2 - la1) / 2) ** 2 + Math.cos(r(la1)) * Math.cos(r(la2)) * Math.sin(r(lo2 - lo1) / 2) ** 2;
+  return 6371 * 2 * Math.asin(Math.sqrt(h));
+}
+function detect(level) {
+  const L = D.levels[level], E = D.events, alerts = [];
+  const alert = (type, severity, evs, why) => alerts.push({ type, severity, attack: D.attack[type], t: evs[0].t, user: evs[0].user, ip: evs[0].ip, why,
+    incident: (evs.find(e => e.incident) || {}).incident || null });
+  const byIp = new Map();
+  E.filter(e => !e.ok).forEach(e => { if (!byIp.has(e.ip)) byIp.set(e.ip, []); byIp.get(e.ip).push(e); });
+  for (const [ip, fails] of byIp) {
+    let i = 0;
+    while (i < fails.length) {
+      const win = fails.slice(i).filter(f => ts(f) - ts(fails[i]) <= 60 * MIN), users = new Set(win.map(f => f.user));
+      if (users.size >= L.spray_users && win.length <= users.size * 1.5) {
+        alert("Password spraying", "high", win, `${win.length} failed logins across ${users.size} different accounts from ${ip} in one hour`); i += win.length; continue; }
+      const short = win.filter(f => ts(f) - ts(win[0]) <= 15 * MIN);
+      if (short.length >= L.bf_fail) {
+        const last = ts(short[short.length - 1]), follow = E.filter(e => e.ok && e.ip === ip && ts(e) - last >= 0 && ts(e) - last <= 30 * MIN);
+        alert("Brute force", follow.length ? "critical" : "high", short.concat(follow), `${short.length} failed logins from ${ip} in 15 min` + (follow.length ? `, then a SUCCESSFUL login as ${follow[0].user}` : ""));
+        i += win.length; continue; }
+      i++;
+    }
+  }
+  const byUser = new Map();
+  E.filter(e => e.ok).forEach(e => { if (!byUser.has(e.user)) byUser.set(e.user, []); byUser.get(e.user).push(e); });
+  for (const [u, ok] of byUser) {
+    const seen = new Set(), mbs = ok.map(e => Math.log1p(e.mb_out));
+    ok.forEach((e, i) => {
+      const others = mbs.slice(0, i).concat(mbs.slice(i + 1)), n = Math.max(others.length, 1);
+      const mu = others.reduce((a, b) => a + b, 0) / n, sd = Math.max(Math.sqrt(others.reduce((a, m) => a + (m - mu) ** 2, 0) / n), 0.3);
+      if (i > 0) { const prev = ok[i - 1], hours = Math.max((ts(e) - ts(prev)) / 3600000, 1 / 60), dist = km(prev.city, e.city);
+        if (dist > 300 && dist / hours > L.kmh) alert("Impossible travel", "high", [e, prev], `${prev.city} → ${e.city} (${Math.round(dist).toLocaleString()} km) in ${Math.round(hours * 60)} min = ${Math.round(dist / hours).toLocaleString()} km/h`); }
+      const z = (Math.log1p(e.mb_out) - mu) / sd;
+      if (z > L.z) alert("Data exfiltration spike", "high", [e], `${Math.round(e.mb_out).toLocaleString()} MB sent vs. this user's normal ~${Math.round(Math.expm1(mu)).toLocaleString()} MB (z = ${z.toFixed(1)})`);
+      const d = new Date(ts(e) + D.cities.Denver[3] * 3600000), local = d.getUTCHours(), [lo, hi] = L.admin_hours;
+      if (e.admin && !(local >= lo && local < hi)) alert("Off-hours admin login", "critical", [e], `Admin login at ${String(local).padStart(2, "0")}:${String(d.getUTCMinutes()).padStart(2, "0")} Denver time from ${e.city}`);
+      if (seen.size && !seen.has(e.country) && level >= 2) alert("First login from new country", "low", [e], `First login from ${e.country} for ${u}`);
+      seen.add(e.country);
+    });
+  }
+  return alerts.sort((a, b) => a.t < b.t ? -1 : a.t > b.t ? 1 : 0);
+}
+
+const T0 = Date.parse("2026-09-28T00:00:00Z") + D_OFF();
+function D_OFF() { return 6 * 3600000; }  // shift so bins are Denver-local days
+function drawTimeline() {
+  const c = $("tl"), x = c.getContext("2d"), W = c.width, H = c.height, padB = 26, bins = 168;
+  const ok = new Array(bins).fill(0), bad = new Array(bins).fill(0);
+  D.events.forEach(e => { const b = Math.floor((ts(e) - T0) / 3600000); if (b >= 0 && b < bins) (e.ok ? ok : bad)[b]++; });
+  const max = Math.max(...ok.map((v, i) => v + bad[i]), 1), bw = W / bins, sc = (H - padB - 22) / max;
+  x.clearRect(0, 0, W, H);
+  for (let i = 0; i < bins; i++) {
+    x.fillStyle = css("--shelf"); x.fillRect(i * bw, H - padB - ok[i] * sc, bw - 1, ok[i] * sc);
+    x.fillStyle = "#d0442f"; x.fillRect(i * bw, H - padB - (ok[i] + bad[i]) * sc, bw - 1, bad[i] * sc);
+  }
+  x.fillStyle = css("--muted"); x.font = "13px Inter, sans-serif"; x.textAlign = "center";
+  ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].forEach((d, i) => { x.fillText(d, (i * 24 + 12) * bw, H - 8);
+    x.strokeStyle = css("--line"); x.beginPath(); x.moveTo(i * 24 * bw, 0); x.lineTo(i * 24 * bw, H - padB); x.stroke(); });
+  ALERTS.forEach((a, i) => { const b = (ts(a) - T0) / 3600000, cx = b * bw, sel = i === SEL;
+    x.fillStyle = a.severity === "critical" ? "#b42318" : a.severity === "high" ? "#e0a800" : css("--accent");
+    x.beginPath(); x.moveTo(cx - (sel ? 9 : 6), sel ? 0 : 4); x.lineTo(cx + (sel ? 9 : 6), sel ? 0 : 4); x.lineTo(cx, sel ? 16 : 14); x.fill();
+    if (sel) { x.strokeStyle = x.fillStyle; x.setLineDash([4, 4]); x.beginPath(); x.moveTo(cx, 16); x.lineTo(cx, H - padB); x.stroke(); x.setLineDash([]); } });
+}
+function render() {
+  const lvl = +$("lvl").value; $("lvlV").textContent = lvl;
+  ALERTS = detect(lvl); SEL = -1;
+  const inc = new Set(D.events.filter(e => e.incident).map(e => e.incident)), caught = new Set(ALERTS.filter(a => a.incident).map(a => a.incident));
+  $("mInc").textContent = `${[...caught].filter(c => inc.has(c)).length}/${inc.size}`;
+  $("mAl").textContent = ALERTS.length; $("mFP").textContent = ALERTS.filter(a => !a.incident).length; $("mEv").textContent = D.events.length.toLocaleString();
+  $("alerts").innerHTML = ALERTS.map((a, i) => `<tr class="alert" data-i="${i}"><td class="small">${a.t.replace("T", " ")}</td><td><span class="sev s-${a.severity}">${a.severity}</span></td>
+    <td><b>${esc(a.type)}</b><br><span class="muted small">${esc(a.user)} · ${esc(a.ip)}</span></td><td class="small">${esc(a.why)}</td><td class="small">${esc(a.attack)}</td>
+    <td class="verdict ${a.incident ? "good" : "muted"}">${a.incident ? "✓ Real attack" : "False positive"}</td></tr>`).join("");
+  drawTimeline();
+}
+$("lvl").addEventListener("input", render);
+$("alerts").addEventListener("click", e => { const r = e.target.closest("tr.alert"); if (!r) return; SEL = +r.dataset.i;
+  document.querySelectorAll("tr.alert").forEach((t, j) => t.classList.toggle("sel", j === SEL)); drawTimeline(); $("tl").scrollIntoView({ behavior: "smooth", block: "center" }); });
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", drawTimeline);
+fetch("data/auth_logs.json").then(r => r.json()).then(d => { D = d; render(); });
+</script>
+</body>
+</html>
