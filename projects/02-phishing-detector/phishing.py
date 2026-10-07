@@ -21,8 +21,8 @@ HERE = Path(__file__).parent
 SITE_DATA = HERE.parents[1] / "docs" / "demos" / "data"
 
 # Fictional organizations used in the synthetic data
-BRANDS = {"northbank": "northbank.com", "acmecloud": "acmecloud.com", "parcelgo": "parcelgo.com", "payflow": "payflow.com"}
-COMPANY = "zephyrtech.com"   # the client's own domain
+BRANDS = {"northbank": "northbank.com", "nimbus": "nimbus.com", "parcelgo": "parcelgo.com", "payflow": "payflow.com"}
+COMPANY = "kaiyun.com"   # the client's own domain
 SUSPICIOUS_TLDS = (".top", ".xyz", ".click", ".zip", ".info", ".ru", ".cn", ".live")
 SHORTENERS = ("bit.ly", "tinyurl.com", "t.co", "is.gd")
 RISKY_EXT = (".html", ".htm", ".zip", ".iso", ".exe", ".js", ".lnk", ".xlsm", ".docm")
@@ -125,11 +125,11 @@ def build_dataset(seed: int = 7) -> list[dict]:
             att = []
             brand, sender = "parcelgo", f"tracking@{rng.choice(['parcelg0', 'parcelgo-delivery', 'parce1go'])}{tld}"
         elif kind == "giftcard":
-            sender = f"{rng.choice(['ceo.office', 'exec.assistant'])}@{rng.choice(['zephyrtech-mail.com', 'zephyr-tech.co', 'gmail.com'])}"
+            sender = f"{rng.choice(['ceo.office', 'exec.assistant'])}@{rng.choice(['kaiyun-mail.com', 'kaiyun-corp.co', 'gmail.com'])}"
             subj = "Quick favor - urgent"
             body = f"Hi {rng.choice(names)}, are you at your desk? I need you to buy gift cards for a client today, it's urgent. Send me the codes asap. Don't call, I'm in a meeting."
             links, att = [], []
-            return {"from_name": "Zephyr CEO", "from_addr": sender, "reply_to": "", "subject": subj, "body": body, "links": links, "attachments": att, "label": 1}
+            return {"from_name": "Kaiyun CEO", "from_addr": sender, "reply_to": "", "subject": subj, "body": body, "links": links, "attachments": att, "label": 1}
         elif kind == "bec_vendor":  # sent from a real, compromised vendor mailbox: very few signals
             v = rng.choice(list(BRANDS))
             return {"from_name": f"{v.title()} Accounts", "from_addr": f"accounts@{BRANDS[v]}", "reply_to": "",
@@ -155,7 +155,7 @@ def build_dataset(seed: int = 7) -> list[dict]:
             return {"from_name": sender.split("@")[0].title(), "from_addr": sender, "reply_to": "", "subject": subj, "body": body, "links": links,
                     "attachments": rng.choice([[], ["notes.pdf"], ["roadmap.docx"]]), "label": 0}
         if kind == "it_alert":  # genuine but phishy-sounding internal security notice
-            return {"from_name": "Zephyr IT Security", "from_addr": f"security@{COMPANY}", "reply_to": "",
+            return {"from_name": "Kaiyun IT Security", "from_addr": f"security@{COMPANY}", "reply_to": "",
                     "subject": "Action required: security training due", "body": f"Hi {n}, action required: complete your annual security training within 24 hours or your account will be locked until it's done.",
                     "links": [{"text": "Start training", "href": f"https://training.{COMPANY}/start"}], "attachments": [], "label": 0}
         brand = rng.choice(list(BRANDS))
